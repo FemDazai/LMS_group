@@ -17,3 +17,4 @@ Scenario: Auth
 	| perojoknebulka@gmail.com | 123456789 |
 	And Click sign in button
 	Then Must login to the user page
+
