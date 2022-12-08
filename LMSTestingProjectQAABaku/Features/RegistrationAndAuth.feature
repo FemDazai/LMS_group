@@ -10,3 +10,10 @@ Scenario: Registration as student
 	And Click registration button
 	Then You should receive a notification about the completion of registration
 
+Scenario: Auth
+	Given Open auth web page
+	When Fill form
+	| Email                    | Password  |
+	| perojoknebulka@gmail.com | 123456789 |
+	And Click sign in button
+	Then Must login to the user page
