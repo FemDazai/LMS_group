@@ -4,10 +4,7 @@ A short summary of the feature
 
 Scenario: As manager create teacher 
 Given Open auth web page
-And Fill form
-| Email                    | Password  |
-| perojoknebulka@gmail.com | 123456789 |
-And Click sign in button
+And Log in as a manager
 And I click tab all users
 | NSP user | Role |
 When I click specific users role 
