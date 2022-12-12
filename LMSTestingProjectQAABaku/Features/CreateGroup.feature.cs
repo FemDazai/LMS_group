@@ -19,7 +19,7 @@ namespace LMSTestingProjectQAABaku.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class RegistrationFeature : object, Xunit.IClassFixture<RegistrationFeature.FixtureData>, System.IDisposable
+    public partial class CreateGroupFeature : object, Xunit.IClassFixture<CreateGroupFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -28,10 +28,10 @@ namespace LMSTestingProjectQAABaku.Features
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "RegistrationAndAuth.feature"
+#line 1 "CreateGroup.feature"
 #line hidden
         
-        public RegistrationFeature(RegistrationFeature.FixtureData fixtureData, LMSTestingProjectQAABaku_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public CreateGroupFeature(CreateGroupFeature.FixtureData fixtureData, LMSTestingProjectQAABaku_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,7 +40,7 @@ namespace LMSTestingProjectQAABaku.Features
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Registration", "Регистрация пользователя как студента", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CreateGroup", "A short summary of the feature", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -80,17 +80,17 @@ namespace LMSTestingProjectQAABaku.Features
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Registration as a student")]
-        [Xunit.TraitAttribute("FeatureTitle", "Registration")]
-        [Xunit.TraitAttribute("Description", "Registration as a student")]
-        [Xunit.TraitAttribute("Category", "Student")]
-        public virtual void RegistrationAsAStudent()
+        [Xunit.SkippableFactAttribute(DisplayName="Manager create new group")]
+        [Xunit.TraitAttribute("FeatureTitle", "CreateGroup")]
+        [Xunit.TraitAttribute("Description", "Manager create new group")]
+        [Xunit.TraitAttribute("Category", "tag1")]
+        public virtual void ManagerCreateNewGroup()
         {
             string[] tagsOfScenario = new string[] {
-                    "Student"};
+                    "tag1"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Registration as a student", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 5
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Manager create new group", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -110,41 +110,30 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 6
- testRunner.Given("We enter the text of the site into search bar and click enter", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
 #line 7
- testRunner.When("Click to  the \"Регистрация\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("Open auth web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Surname",
-                            "Name",
-                            "Patronymic",
-                            "Birth date",
-                            "Password",
-                            "Repeat password",
-                            "E-mail",
-                            "Phone"});
-                table16.AddRow(new string[] {
-                            "Перошков",
-                            "Иван",
-                            "Булкович",
-                            "01.10.2000",
-                            "123456789",
-                            "123456789",
-                            "perojoknebulkaa4@gmail.com",
-                            "+71234567890"});
 #line 8
- testRunner.And("Fill the regist form", ((string)(null)), table16, "And ");
+    testRunner.And("Log in as a manager", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
+#line 9
+    testRunner.And("Go to the tab \"Создать группу\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 10
+ testRunner.And("I get page to create", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Group name",
+                            "Choose teachers",
+                            "Choose tutors"});
 #line 11
- testRunner.And("Click to checkbox button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 12
- testRunner.And("Click the \"Зарегистрироваться\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I fill in all the fields", ((string)(null)), table4, "When ");
 #line hidden
 #line 13
-    testRunner.Then("I should be notified \"Добро пожаловать!!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("Click on \"Save\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 14
+ testRunner.Then("The created group will appear in the list of groups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -157,12 +146,12 @@ this.ScenarioInitialize(scenarioInfo);
             
             public FixtureData()
             {
-                RegistrationFeature.FeatureSetup();
+                CreateGroupFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                RegistrationFeature.FeatureTearDown();
+                CreateGroupFeature.FeatureTearDown();
             }
         }
     }
