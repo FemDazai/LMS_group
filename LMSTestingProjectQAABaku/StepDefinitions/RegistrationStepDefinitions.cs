@@ -1,5 +1,6 @@
 using LMSTestingProjectQAABaku.Models;
 using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Support.UI;
 using System;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
@@ -36,44 +37,51 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         [When(@"Fill the regist form")]
         public void WhenFillTheRegistForm(Table table)
         {
-            var t = table.CreateSet<RegistrationRequestModel>().ToList();
+            var requestTable = table.CreateInstance<RegistrationRequestModel>();
 
-            string xpacthSurname = @"/html/body/div/div/main/div[1]/form/div[1]/input";
-            IWebElement buttonSurname = _driver.FindElement(By.XPath(xpacthSurname));
-            buttonSurname.SendKeys(t[0].Surname);
+            string xpathSurname = @"/html/body/div/div/main/div[1]/form/div[1]/input";
+            IWebElement buttonSurname = _driver.FindElement(By.XPath(xpathSurname));
+            buttonSurname.SendKeys(requestTable.Surname);
 
-            string xpacthName = @"/html/body/div/div/main/div[1]/form/div[2]/div[1]/input";
-            IWebElement buttonName = _driver.FindElement(By.XPath(xpacthName));
-            buttonName.SendKeys(t[0].Name);
+            string xpathName = @"/html/body/div/div/main/div[1]/form/div[2]/div[1]/input";
+            IWebElement buttonName = _driver.FindElement(By.XPath(xpathName));
+            buttonName.SendKeys(requestTable.Name);
 
-            string xpacthPatronymic = @"/html/body/div/div/main/div[1]/form/div[2]/div[2]/input";
-            IWebElement buttonPatronymic = _driver.FindElement(By.XPath(xpacthPatronymic));
-            buttonPatronymic.SendKeys(t[0].Patronymic);
+            string xpathPatronymic = @"/html/body/div/div/main/div[1]/form/div[2]/div[2]/input";
+            IWebElement buttonPatronymic = _driver.FindElement(By.XPath(xpathPatronymic));
+            buttonPatronymic.SendKeys(requestTable.Patronymic);
 
-            string xpacthBirthDate = @"/html/body/div/div/main/div[1]/form/div[3]/div/div/div[1]/div/input";
-            IWebElement buttonBirthDate = _driver.FindElement(By.XPath(xpacthBirthDate));
+            string xpathBirthDate = @"/html/body/div/div/main/div[1]/form/div[3]/div/div/div[1]/div/input";
+            IWebElement buttonBirthDate = _driver.FindElement(By.XPath(xpathBirthDate));
             Actions action = new Actions(_driver);
             action.DoubleClick(buttonBirthDate).Perform();
             buttonBirthDate.SendKeys(Keys.Backspace);
             //buttonBirthDate.SendKeys(Keys.Delete);           
-            buttonBirthDate.SendKeys(t[0].BirthDate);
+            buttonBirthDate.SendKeys(requestTable.BirthDate);
 
-            string xpacthPassword = @"/html/body/div/div/main/div[1]/form/div[4]/div[1]/input";
-            IWebElement buttonPassword = _driver.FindElement(By.XPath(xpacthPassword));
-            buttonPassword.SendKeys(t[0].Password);
+            string xpathPassword = @"/html/body/div/div/main/div[1]/form/div[4]/div[1]/input";
+            IWebElement buttonPassword = _driver.FindElement(By.XPath(xpathPassword));
+            buttonPassword.SendKeys(requestTable.Password);
 
-            string xpacthRepeatPassword = @"/html/body/div/div/main/div[1]/form/div[4]/div[2]/input";
-            IWebElement buttonRepeatPassword = _driver.FindElement(By.XPath(xpacthRepeatPassword));
-            buttonRepeatPassword.SendKeys(t[0].RepeatPassword);
+            string xpathRepeatPassword = @"/html/body/div/div/main/div[1]/form/div[4]/div[2]/input";
+            IWebElement buttonRepeatPassword = _driver.FindElement(By.XPath(xpathRepeatPassword));
+            buttonRepeatPassword.SendKeys(requestTable.RepeatPassword);
 
-            string xpacthEmail = @"/html/body/div/div/main/div[1]/form/div[5]/div[1]/input";
-            IWebElement buttonEmail = _driver.FindElement(By.XPath(xpacthEmail));
-            buttonEmail.SendKeys(t[0].Email);
+            string xpathEmail = @"/html/body/div/div/main/div[1]/form/div[5]/div[1]/input";
+            IWebElement buttonEmail = _driver.FindElement(By.XPath(xpathEmail));
+            buttonEmail.SendKeys(requestTable.Email);
 
-            string xpacthPhone = @"/html/body/div/div/main/div[1]/form/div[5]/div[2]/input";
-            IWebElement buttonPhone = _driver.FindElement(By.XPath(xpacthPhone));
-            buttonPhone.SendKeys(t[0].Phone);
+            string xpathPhone = @"/html/body/div/div/main/div[1]/form/div[5]/div[2]/input";
+            IWebElement buttonPhone = _driver.FindElement(By.XPath(xpathPhone));
+            buttonPhone.SendKeys(requestTable.Phone);
 
+        }
+
+        [When(@"Click to checkbox button")]
+        public void WhenClickToCheckboxButton()
+        {
+            IWebElement button = _driver.FindElement(By.XPath($"//*[@class='custom-checkbox']"));
+            button.Click();;
         }
 
         [When(@"Click the ""([^""]*)"" button")]
@@ -82,36 +90,19 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             string xpacth = @"/html/body/div/div/main/div[1]/form/div[6]/button[1]";
             IWebElement button = _driver.FindElement(By.XPath(xpacth));
             button.Click();
+            Thread.Sleep(1000);
+
         }
 
-        [Then(@"Registered user can log in")]
-        public void ThenRegisteredUserCanLogIn()
+        [Then(@"I should be notified ""([^""]*)""")]
+        public void ThenIShouldBeNotified(string expected)
         {
-            throw new PendingStepException();
-        }
-
-        [When(@"Click to the ""([^""]*)"" button")]
-        public void WhenClickToTheButton1(string вход)
-        {
-            throw new PendingStepException();
-        }
-
-        [When(@"Fill the auth form")]
-        public void WhenFillTheAuthForm(Table table)
-        {
-            throw new PendingStepException();
-        }
-
-        [When(@"Click  to ""([^""]*)"" button")]
-        public void WhenClickToButton(string войти)
-        {
-            throw new PendingStepException();
-        }
-
-        [Then(@"Get user account page")]
-        public void ThenGetUserAccountPage()
-        {
-            throw new PendingStepException();
+            string xpacth = @"/html/body/div/div/main/div[2]/div/p";
+            IWebElement button = _driver.FindElement(By.XPath(xpacth));
+            //IWebElement textBox = _driver.FindElement(By.XPath(@"/html/body/div/div/main/div[2]/div"));
+            string actual = button.Text;
+            Assert.Equal(expected, actual);
+            //_driver.implicitly_wait(10)
         }
     }
 }
