@@ -12,10 +12,3 @@ Scenario: Registration as a student
 	And Click the "Зарегистрироваться" button  
     Then I should be notified "Добро пожаловать!!" 
 
-#Scenario: Auth
-#	Given Open auth web page
-#	When Fill form
-#	| Email                    | Password  |
-#	| perojoknebulka@gmail.com | 123456789 |
-#	And Click sign in button
-#	Then Must login to the user page

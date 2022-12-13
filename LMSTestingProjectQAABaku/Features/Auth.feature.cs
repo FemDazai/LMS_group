@@ -19,7 +19,7 @@ namespace LMSTestingProjectQAABaku.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class GiveRolesFeature : object, Xunit.IClassFixture<GiveRolesFeature.FixtureData>, System.IDisposable
+    public partial class AuthFeature : object, Xunit.IClassFixture<AuthFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -28,10 +28,10 @@ namespace LMSTestingProjectQAABaku.Features
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "GiveRoles.feature"
+#line 1 "Auth.feature"
 #line hidden
         
-        public GiveRolesFeature(GiveRolesFeature.FixtureData fixtureData, LMSTestingProjectQAABaku_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public AuthFeature(AuthFeature.FixtureData fixtureData, LMSTestingProjectQAABaku_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,7 +40,7 @@ namespace LMSTestingProjectQAABaku.Features
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "GiveRoles", "A short summary of the feature", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Auth", "A short summary of the feature", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -80,15 +80,17 @@ namespace LMSTestingProjectQAABaku.Features
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="As manager create teacher")]
-        [Xunit.TraitAttribute("FeatureTitle", "GiveRoles")]
-        [Xunit.TraitAttribute("Description", "As manager create teacher")]
-        public virtual void AsManagerCreateTeacher()
+        [Xunit.SkippableFactAttribute(DisplayName="Auth")]
+        [Xunit.TraitAttribute("FeatureTitle", "Auth")]
+        [Xunit.TraitAttribute("Description", "Auth")]
+        [Xunit.TraitAttribute("Category", "Student")]
+        public virtual void Auth()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "Student"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("As manager create teacher", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 5
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Auth", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -108,34 +110,23 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 6
-testRunner.Given("Open auth web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
 #line 7
-testRunner.And("Log in as a manager", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("Open auth web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
-                            "NSP user",
-                            "Role"});
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Email",
+                            "Password"});
+                table1.AddRow(new string[] {
+                            "perojoknebulka@gmail.com",
+                            "987654321"});
 #line 8
-testRunner.And("I click tab all users", ((string)(null)), table10, "And ");
+ testRunner.When("Fill form", ((string)(null)), table1, "When ");
 #line hidden
-#line 10
-testRunner.When("I click specific users role", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Teacher",
-                            "Tutor",
-                            "Methodist",
-                            "Manager"});
 #line 11
-testRunner.Then("I get 4 checkboxs", ((string)(null)), table11, "Then ");
+ testRunner.And("Click sign in  button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 13
-testRunner.And("click checkbox Teacher", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 14
-testRunner.Then("I get users info and his role", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 12
+ testRunner.Then("I shold to see the username \"Иван\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -148,12 +139,12 @@ testRunner.Then("I get users info and his role", ((string)(null)), ((TechTalk.Sp
             
             public FixtureData()
             {
-                GiveRolesFeature.FeatureSetup();
+                AuthFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                GiveRolesFeature.FeatureTearDown();
+                AuthFeature.FeatureTearDown();
             }
         }
     }
