@@ -24,4 +24,13 @@ Scenario: Get a list of classes as a student
  Then Delete user not found in list "Все пользователи"
  And Remote user cannot login
 
+Scenario: As manager get teacher sortlist 
+Given Open auth web page
+And Log in as a manager
+And I click tab all users
+| NSP user | Role |
+When I click Search Role
+And I click tab Teachers 
+Then I get teachers sort list
+
 
