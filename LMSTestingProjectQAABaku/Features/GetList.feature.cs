@@ -111,14 +111,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given("Open auth web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "Email",
                             "Password"});
-                table5.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "perojoknebulka@gmail.com",
                             "123456789"});
 #line 7
- testRunner.And("Fill form", ((string)(null)), table5, "And ");
+ testRunner.And("Fill form", ((string)(null)), table6, "And ");
 #line hidden
 #line 10
  testRunner.And("Click sign in button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -126,12 +126,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 11
  testRunner.When("Click on the \"Занятия\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                             "Lesson number",
                             "Class date",
                             "Name of the lesson"});
 #line 12
- testRunner.Then("I should get a list of all activities", ((string)(null)), table6, "Then ");
+ testRunner.Then("I should get a list of all activities", ((string)(null)), table7, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -174,13 +174,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 18
  testRunner.And("Go to the tab \"Все пользователи\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Last name",
                             "Patronymic",
                             "Role"});
 #line 19
- testRunner.And("I get all users list", ((string)(null)), table7, "And ");
+ testRunner.And("I get all users list", ((string)(null)), table8, "And ");
 #line hidden
 #line 21
  testRunner.When("Click \"delete\" button next to username", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -236,11 +236,11 @@ testRunner.Given("Open auth web page", ((string)(null)), ((TechTalk.SpecFlow.Tab
 #line 29
 testRunner.And("Log in as a manager", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
                             "NSP user",
                             "Role"});
 #line 30
-testRunner.And("I click tab all users", ((string)(null)), table8, "And ");
+testRunner.And("I click tab all users", ((string)(null)), table9, "And ");
 #line hidden
 #line 32
 testRunner.When("I click Search Role", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
