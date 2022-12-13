@@ -111,14 +111,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 testRunner.Given("Open auth web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                             "Email",
                             "Password"});
-                table12.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "perojoknebulka@gmail.com",
                             "123456789"});
 #line 8
-testRunner.And("Fill form", ((string)(null)), table12, "And ");
+testRunner.And("Fill form", ((string)(null)), table10, "And ");
 #line hidden
 #line 11
 testRunner.And("Click sign in button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -126,7 +126,7 @@ testRunner.And("Click sign in button", ((string)(null)), ((TechTalk.SpecFlow.Tab
 #line 12
 testRunner.When("I click homework tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
                             "DateOfIssue",
                             "DeliveryDate",
                             "Name",
@@ -134,7 +134,7 @@ testRunner.When("I click homework tab", ((string)(null)), ((TechTalk.SpecFlow.Ta
                             "Link",
                             "AddLink"});
 #line 13
-testRunner.And("get page for send homework", ((string)(null)), table13, "And ");
+testRunner.And("get page for send homework", ((string)(null)), table11, "And ");
 #line hidden
 #line 15
 testRunner.And("I add homework link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

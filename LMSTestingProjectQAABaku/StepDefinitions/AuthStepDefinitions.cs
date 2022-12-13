@@ -30,9 +30,9 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         {
             var _table = table.CreateInstance<AuthModel>();
 
-            string xpath1 = @"/html/body/div/div/main/div[1]/form/div[1]/input";
+            string xpath1 = @"//input[@class='form-input']";//авторизация почта
             IWebElement textbox1 = _driver.FindElement(By.XPath(xpath1));
-            string xpath2 = @"/html/body/div/div/main/div[1]/form/div[2]/input";
+            string xpath2 = @"//input[@class='form-input custom-password']";//авторизация пароль
             IWebElement textbox2 = _driver.FindElement(By.XPath(xpath2));
 
 
@@ -46,7 +46,7 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         [When(@"Click sign in  button")]
         public void WhenClickSignInButton()
         {
-            string xpath = @"/html/body/div/div/main/div[1]/form/div[3]/button[1]";
+            string xpath = @"//button[@class='sc-bczRLJ iJvUkY btn btn-fill flex-container']";//кнопка войти авториз
             IWebElement button = _driver.FindElement(By.XPath(xpath));
             button.Click();
             Thread.Sleep(1000);
@@ -55,7 +55,7 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         [Then(@"I shold to see the username ""([^""]*)""")]
         public void ThenISholdToSeeTheUsername(string expected)
         {
-            string xpath = @"/html/body/div/div/aside/div/div[1]/div[2]/div/a/span[2]";
+            string xpath = @"//span[@class='avatar-name transition-styles']";//имя на акке
             IWebElement button = _driver.FindElement(By.XPath(xpath));
             string actual = button.Text;
             Assert.Equal(expected, actual);
