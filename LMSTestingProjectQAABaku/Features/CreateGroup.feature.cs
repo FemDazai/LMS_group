@@ -122,12 +122,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 10
  testRunner.And("I get page to create", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "Group name",
                             "Choose teachers",
                             "Choose tutors"});
 #line 11
- testRunner.When("I fill in all the fields", ((string)(null)), table4, "When ");
+ testRunner.When("I fill in all the fields", ((string)(null)), table5, "When ");
 #line hidden
 #line 13
  testRunner.And("Click on \"Save\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
