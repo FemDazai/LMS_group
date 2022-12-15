@@ -29,7 +29,7 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         [When(@"Click to  the ""([^""]*)"" button")]
         public void WhenClickToTheButton(string регистрация)
         {
-            string xpacth = @"/html/body/div/div/aside/div/nav/div/a[2]";
+            string xpacth = @"//a[@class='auth-link']";//кнопка для регистрации
             IWebElement button = _driver.FindElement(By.XPath(xpacth));
             button.Click();
         }
@@ -39,19 +39,19 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         {
             var requestTable = table.CreateInstance<RegistrationRequestModel>();
 
-            string xpathSurname = @"/html/body/div/div/main/div[1]/form/div[1]/input";
+            string xpathSurname = @"//input[@placeholder='Ефременков']";//ввод фамилии для регист.
             IWebElement buttonSurname = _driver.FindElement(By.XPath(xpathSurname));
             buttonSurname.SendKeys(requestTable.Surname);
 
-            string xpathName = @"/html/body/div/div/main/div[1]/form/div[2]/div[1]/input";
+            string xpathName = @"//input[@placeholder='Антон']";
             IWebElement buttonName = _driver.FindElement(By.XPath(xpathName));
             buttonName.SendKeys(requestTable.Name);
 
-            string xpathPatronymic = @"/html/body/div/div/main/div[1]/form/div[2]/div[2]/input";
+            string xpathPatronymic = @"//input[@placeholder='Сергеевич']";
             IWebElement buttonPatronymic = _driver.FindElement(By.XPath(xpathPatronymic));
             buttonPatronymic.SendKeys(requestTable.Patronymic);
 
-            string xpathBirthDate = @"/html/body/div/div/main/div[1]/form/div[3]/div/div/div[1]/div/input";
+            string xpathBirthDate = @"//input [@value='14.12.2022']";
             IWebElement buttonBirthDate = _driver.FindElement(By.XPath(xpathBirthDate));
             Actions action = new Actions(_driver);
             action.DoubleClick(buttonBirthDate).Perform();
@@ -59,19 +59,19 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             //buttonBirthDate.SendKeys(Keys.Delete);           
             buttonBirthDate.SendKeys(requestTable.BirthDate);
 
-            string xpathPassword = @"/html/body/div/div/main/div[1]/form/div[4]/div[1]/input";
+            string xpathPassword = @"//input[@name='password']";
             IWebElement buttonPassword = _driver.FindElement(By.XPath(xpathPassword));
             buttonPassword.SendKeys(requestTable.Password);
 
-            string xpathRepeatPassword = @"/html/body/div/div/main/div[1]/form/div[4]/div[2]/input";
+            string xpathRepeatPassword = @"//input[@name='confirmPassword']";
             IWebElement buttonRepeatPassword = _driver.FindElement(By.XPath(xpathRepeatPassword));
             buttonRepeatPassword.SendKeys(requestTable.RepeatPassword);
 
-            string xpathEmail = @"/html/body/div/div/main/div[1]/form/div[5]/div[1]/input";
+            string xpathEmail = @"//input [@placeholder='example@example.com']";
             IWebElement buttonEmail = _driver.FindElement(By.XPath(xpathEmail));
             buttonEmail.SendKeys(requestTable.Email);
 
-            string xpathPhone = @"/html/body/div/div/main/div[1]/form/div[5]/div[2]/input";
+            string xpathPhone = @"//input [@placeholder='+7(999)888-77-66']";
             IWebElement buttonPhone = _driver.FindElement(By.XPath(xpathPhone));
             buttonPhone.SendKeys(requestTable.Phone);
 
@@ -87,7 +87,7 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         [When(@"Click the ""([^""]*)"" button")]
         public void WhenClickTheButton(string зарегистрироваться)
         {
-            string xpacth = @"/html/body/div/div/main/div[1]/form/div[6]/button[1]";
+            string xpacth = @"//button[@class='sc-bczRLJ iJvUkY btn btn-fill flex-container']";
             IWebElement button = _driver.FindElement(By.XPath(xpacth));
             button.Click();
             Thread.Sleep(1000);
@@ -97,7 +97,7 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         [Then(@"I should be notified ""([^""]*)""")]
         public void ThenIShouldBeNotified(string expected)
         {
-            string xpacth = @"/html/body/div/div/main/div[2]/div/p";
+            string xpacth = @"//p[@class='notification-text'] ";
             IWebElement button = _driver.FindElement(By.XPath(xpacth));
             //IWebElement textBox = _driver.FindElement(By.XPath(@"/html/body/div/div/main/div[2]/div"));
             string actual = button.Text;
