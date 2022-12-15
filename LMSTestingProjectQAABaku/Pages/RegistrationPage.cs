@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LMSTestingProjectQAABaku.Models
+namespace LMSTestingProjectQAABaku.Pages
 {
-    public class TableToRegistrationModel
+    public class RegistrationPage
     {
-       public string Value { get; set; }
 
     }
 }
