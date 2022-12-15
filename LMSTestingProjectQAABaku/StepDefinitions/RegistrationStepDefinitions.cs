@@ -74,24 +74,23 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             string xpathPhone = @"//input [@placeholder='+7(999)888-77-66']";
             IWebElement buttonPhone = _driver.FindElement(By.XPath(xpathPhone));
             buttonPhone.SendKeys(requestTable.Phone);
-
+            IWebElement button = _driver.FindElement(By.XPath($"//*[@class='custom-checkbox']"));
+            button.Click();
+            Thread.Sleep(1000);
         }
 
         [When(@"Click to checkbox button")]
         public void WhenClickToCheckboxButton()
         {
-            IWebElement button = _driver.FindElement(By.XPath($"//*[@class='custom-checkbox']"));
-            button.Click();;
+            string xpacth = @"//button[@class='sc-bczRLJ iJvUkY btn btn-fill flex-container']";
+            IWebElement button = _driver.FindElement(By.XPath(xpacth));
+            button.Click();
         }
 
         [When(@"Click the ""([^""]*)"" button")]
         public void WhenClickTheButton(string зарегистрироваться)
         {
-            string xpacth = @"//button[@class='sc-bczRLJ iJvUkY btn btn-fill flex-container']";
-            IWebElement button = _driver.FindElement(By.XPath(xpacth));
-            button.Click();
-            Thread.Sleep(1000);
-
+            
         }
 
         [Then(@"I should be notified ""([^""]*)""")]
