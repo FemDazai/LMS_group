@@ -3,6 +3,7 @@ using System.Net;
 using System.Text;
 using LMSTestingProjectQAABaku.Models;
 using System.Text.Json;
+using LMSTestingProjectQAABaku.ModelsApi;
 
 namespace LMSTestingProjectQAABaku
 {
@@ -44,5 +45,27 @@ namespace LMSTestingProjectQAABaku
 
             return token;
         }
+
+        public int GetId(RequestModelApi model)
+        {
+            HttpStatusCode expectedCode = HttpStatusCode.Created;
+            string json = JsonSerializer.Serialize<RequestModelApi>(model);
+            HttpClientHandler clientHandler = new HttpClientHandler();
+            clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+            HttpClient client = new HttpClient(clientHandler);
+            HttpRequestMessage message = new HttpRequestMessage()
+            {
+                Method = HttpMethod.Post,
+                RequestUri = new System.Uri($"https://piter-education.ru:7070/register"),
+                Content = new StringContent(json, Encoding.UTF8, "application/json")
+            };
+            HttpResponseMessage responseMessage = client.Send(message);
+            HttpStatusCode actualCode = responseMessage.StatusCode;
+            string responseJson = responseMessage.Content.ReadAsStringAsync().Result;
+            RegistrationResponseModel InfoUser = JsonSerializer.Deserialize<RegistrationResponseModel>(responseJson)!;
+
+            return InfoUser.id;
+        }
     }
 }
+
