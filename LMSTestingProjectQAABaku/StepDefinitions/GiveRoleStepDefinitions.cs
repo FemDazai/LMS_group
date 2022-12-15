@@ -49,16 +49,16 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         [When(@"Auth  as teacher")]
         public void WhenAuthAsTeacher()
         {
-            string xpathEmail = $"/html/body/div/div/main/div[1]/form/div[1]/input";
-            IWebElement textbox1 = _driver.FindElement(By.XPath(xpathEmail));
-            string xpathPassword = $"/html/body/div/div/main/div[1]/form/div[2]/input";
-            IWebElement textbox2 = _driver.FindElement(By.XPath(xpathPassword));
+            string xpathEmail = $"//input[@class='form-input']";
+            IWebElement textboxEmail = _driver.FindElement(By.XPath(xpathEmail));
+            string xpathPassword = $"//input[@class='form-input custom-password']";
+            IWebElement textboxPassword = _driver.FindElement(By.XPath(xpathPassword));
 
-            textbox1.SendKeys("willywonka@gmail.com");
+            textboxEmail.SendKeys("willywonka@gmail.com");
             Actions action = new Actions(_driver);
-            action.DoubleClick(textbox2).Perform();
-            textbox2.SendKeys(Keys.Backspace);
-            textbox2.SendKeys("123456789");
+            action.DoubleClick(textboxPassword).Perform();
+            textboxPassword.SendKeys(Keys.Backspace);
+            textboxPassword.SendKeys("123456789");
         }
 
         [When(@"Click button ""([^""]*)""")]
@@ -73,7 +73,7 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         [When(@"Click to the role button")]
         public void WhenClickToTheRoleButton()
         {
-            string xpacth = @"/html/body/div/div/aside/div/div[1]/div[2]/div/div/div/div";
+            string xpacth = @"//div[@class='drop-down-filter__wrapper']";
             IWebElement button2 = _driver.FindElement(By.XPath(xpacth));
             button2.Click();
         }
@@ -81,7 +81,7 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         [When(@"Click to  the button teacher")]
         public void WhenClickToTheButtonTeacher()
         {
-            string xpacth = @"/html/body/div/div/aside/div/div[1]/div[2]/div/div/div/div[2]/ul/li[2]";
+            string xpacth = @"//li[text()='Преподаватель'][1]";
             IWebElement button = _driver.FindElement(By.XPath(xpacth));
             button.Click();
         }
@@ -91,7 +91,7 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         {
             string expected = "Вилли";
 
-            string xpath = @"/html/body/div/div/aside/div/div[1]/div[2]/div/a/span[2]";
+            string xpath = @"//span[@class='avatar-name transition-styles']";
             IWebElement NameBox = _driver.FindElement(By.XPath(xpath));
             string actual = NameBox.Text;
             Assert.Equal(expected, actual);
@@ -101,7 +101,7 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         public void ThenIShouldToSeeMyRole()
         {
             string expected = "Преподаватель";
-            string xpath = @"/html/body/div/div/aside/div/div[1]/div[2]/div/div/div/div[1]";
+            string xpath = @"//div[text()='Преподаватель']";
             IWebElement RoleBox = _driver.FindElement(By.XPath(xpath));
             string actual = RoleBox.Text;
             Assert.Equal(expected, actual);
