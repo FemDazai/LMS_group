@@ -1,8 +1,6 @@
 using LMSTestingProjectQAABaku.Models;
 using LMSTestingProjectQAABaku.ModelsApi;
 using OpenQA.Selenium.Interactions;
-using System;
-using TechTalk.SpecFlow;
 
 namespace LMSTestingProjectQAABaku.StepDefinitions
 {
