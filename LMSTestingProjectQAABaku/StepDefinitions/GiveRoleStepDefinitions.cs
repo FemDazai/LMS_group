@@ -19,10 +19,10 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         [Given(@"Request  as student")]
         public void GivenRequestAsStudent()
         {
-            _authPage.Open();
-            _authPage.GetCertificateOfSafety();
+            //_authPage.Open();
+            //_authPage.GetCertificateOfSafety();
             WebClient wClient = new WebClient();
-            RequestModelApi requestUserApiModel = new RequestModelApi()
+            RequestModelApi requestTeacherApiModel = new RequestModelApi()
             {
                 firstName = "Вилли",
                 lastName = "Вонка",
@@ -35,14 +35,47 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
                 gitHubAccount = "github.com/JohnnyDepp",
                 phoneNumber = "+72222222222"
             };
-            int id = wClient.GetId(requestUserApiModel);
+            int Teacherid = wClient.GetId(requestTeacherApiModel);
+
+            RequestModelApi requestTyutorApiModel = new RequestModelApi()
+            {
+                firstName = "Чуя",
+                lastName = "Накахара",
+                patronymic = "Огаев",
+                email = "chuchu@gmail.com",
+                username = "jenaDazaya",
+                password = "123456789",
+                city = "SaintPetersburg",
+                birthDate = "25.12.1990",
+                gitHubAccount = "github.com/JohnnyDepp",
+                phoneNumber = "+72222222222"
+            };
+            int Tyutorid = wClient.GetId(requestTyutorApiModel);
+
+            RequestModelApi requestMethodistApiModel = new RequestModelApi()
+            {
+                firstName = "Дазай",
+                lastName = "Осаму",
+                patronymic = "Одавич",
+                email = "dazai@gmail.com",
+                username = "chuyamilaxa",
+                password = "123456789",
+                city = "SaintPetersburg",
+                birthDate = "15.12.1980",
+                gitHubAccount = "github.com/JohnnyDepp",
+                phoneNumber = "+72222222222"
+            };
+            int Methodistid = wClient.GetId(requestMethodistApiModel);
+
             AuthRequestModelApi authRequestModel = new AuthRequestModelApi()
             {
                 Email = "marina@example.com",
                 Password = "marina123456"
             };
             string actualToken = wClient.Auth(authRequestModel);
-            wClient.SetRole(actualToken, id, "Teacher");
+            wClient.SetRole(actualToken, Teacherid, "Teacher");
+            wClient.SetRole(actualToken, Tyutorid, "Tyutor");
+            wClient.SetRole(actualToken, Methodistid, "Methodist");
         }    
 
         [When(@"Auth  as teacher")]

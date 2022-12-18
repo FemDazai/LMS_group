@@ -111,28 +111,28 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 7
- testRunner.Given("Open auth web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("Request  as student", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 8
-    testRunner.And("Log in as a manager", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Open auth web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 9
-    testRunner.And("Go to the tab \"Создать группу\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("Log in as manager", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 10
- testRunner.And("I get page to create", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("Go to the tab \"Создать группу\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Group name",
-                            "Choose teachers",
-                            "Choose tutors"});
+                            "Group name"});
+                table5.AddRow(new string[] {
+                            "Bryaka2"});
 #line 11
- testRunner.When("I fill in all the fields", ((string)(null)), table5, "When ");
-#line hidden
-#line 13
- testRunner.And("Click on \"Save\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I fill in all the fields in page and choose teacher and tyutor", ((string)(null)), table5, "When ");
 #line hidden
 #line 14
+ testRunner.And("Click on  \"Save\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 15
  testRunner.Then("The created group will appear in the list of groups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
