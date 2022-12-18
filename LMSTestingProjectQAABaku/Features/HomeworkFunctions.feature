@@ -3,14 +3,16 @@
 A short summary of the feature
 
 
-Scenario: As student send homework
+Scenario: As teacher add homework
 Given Open auth web page
-And Fill form
-| Email                    | Password  |
-| perojoknebulka@gmail.com | 123456789 |
-And Click sign in button
-When I click homework tab 
-And get page for send homework
+And Auth as manager
+| Email               | Password     |
+| marina@example.com  | marina123456 |
+And Create a new group
+And Click to button "Выйти"
+And Auth as teacher
+And I click "Домашнее задание" tab 
+When I click get page for send homework
 | DateOfIssue | DeliveryDate | Name | Description | Link | AddLink |
 And I add homework link
 Then I get a notification about a homework status change
