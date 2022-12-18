@@ -12,7 +12,7 @@ namespace LMSTestingProjectQAABaku.Support
         [AfterScenario]
         public void AfterScenario()
         {
-            DriverStorage.Get().Driver.Close(); 
+            DriverStorage.Get().Driver.Close();
         }
     }
     //public class DBCleaner
