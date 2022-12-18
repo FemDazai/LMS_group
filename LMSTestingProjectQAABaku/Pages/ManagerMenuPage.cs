@@ -11,6 +11,8 @@ namespace LMSTestingProjectQAABaku.Pages
     {
         public IWebElement ButtonForCreateGroup => _driver.FindElement(By.XPath(@"//span[text()='Создать группу']"));
         public IWebElement ButtonForGroupList => _driver.FindElement(By.XPath(@"//span[text()='Группы']"));
+        public IWebElement ButtonExit => _driver.FindElement(By.XPath(@"//button[@class='exit flex-center']"));
+
 
         public override void Open()
         {
@@ -29,6 +31,10 @@ namespace LMSTestingProjectQAABaku.Pages
             //Actions action = new Actions(_driver);
             //action.DoubleClick(ButtonForGroupList).Build().Perform();
             ButtonForGroupList.Click();
+        }
+        public void ClickButtonExit()
+        {
+            ButtonExit.Click();
         }
     }
 }

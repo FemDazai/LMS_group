@@ -12,7 +12,6 @@ namespace LMSTestingProjectQAABaku.Pages
         public override void Open()
         {
         }
-
         public IWebElement ButtonUserNameMenu => _driver.FindElement(By.XPath(@"//div[@class='drop-down-filter__wrapper']"));
         public IWebElement ButtonSelectTeacher => _driver.FindElement(By.XPath(@"//li[text()='Преподаватель'][1]"));
         public IWebElement ButtonAvatarName => _driver.FindElement(By.XPath(@"//span[@class='avatar-name transition-styles']"));
@@ -26,6 +25,9 @@ namespace LMSTestingProjectQAABaku.Pages
         public IWebElement FieldEnterDescriptionTask => _driver.FindElement(By.XPath(@"//textarea[@placeholder='Введите текст']"));
         public IWebElement FieldUsefulLinks => _driver.FindElement(By.XPath(@"//textarea[@class='form-input_link form-input']"));
         public IWebElement ButtonPublish => _driver.FindElement(By.XPath(@"//button[@class='sc-bczRLJ iJvUkY btn btn-fill flex-container']"));
+        public IWebElement ButtonSelectRole => _driver.FindElement(By.XPath(@"//div[@class='drop-down-filter  left']"));
+        public IWebElement ButtonSelectRoleinList => _driver.FindElement(By.XPath(@"//li[text()='Преподаватель']"));
+
         public void GetClickButtonUserNameMenu()
         {
             ButtonUserNameMenu.Click();
@@ -89,6 +91,10 @@ namespace LMSTestingProjectQAABaku.Pages
         {
             ButtonPublish.Click();
         }
-
+        public void SelectTeacherRole()
+        {
+            ButtonSelectRole.Click();
+            ButtonSelectRoleinList.Click();
+        }
     }
 }
