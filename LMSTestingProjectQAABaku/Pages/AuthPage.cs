@@ -34,6 +34,5 @@ namespace LMSTestingProjectQAABaku.Pages
         {
             return TextBoxUserName.Text;
         }
-
     }
 }
