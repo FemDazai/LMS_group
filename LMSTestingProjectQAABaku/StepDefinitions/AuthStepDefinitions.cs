@@ -20,6 +20,7 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         {
             _authPage.Open();
             _authPage.GetCertificateOfSafety();
+            Thread.Sleep(1000);
         }
 
         [When(@"Fill form")]
