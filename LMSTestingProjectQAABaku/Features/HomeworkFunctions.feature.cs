@@ -80,14 +80,14 @@ namespace LMSTestingProjectQAABaku.Features
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="As student send homework")]
+        [Xunit.SkippableFactAttribute(DisplayName="As teacher add homework")]
         [Xunit.TraitAttribute("FeatureTitle", "HomeworkFunctions")]
-        [Xunit.TraitAttribute("Description", "As student send homework")]
-        public virtual void AsStudentSendHomework()
+        [Xunit.TraitAttribute("Description", "As teacher add homework")]
+        public virtual void AsTeacherAddHomework()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("As student send homework", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("As teacher add homework", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -111,36 +111,48 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 testRunner.Given("Open auth web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Email",
-                            "Password"});
-                table10.AddRow(new string[] {
-                            "perojoknebulka@gmail.com",
-                            "123456789"});
 #line 8
-testRunner.And("Fill form", ((string)(null)), table10, "And ");
+testRunner.And("Log in as manager", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 11
-testRunner.And("Click sign in button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 9
+testRunner.And("Go to the tab \"Создать группу\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 12
-testRunner.When("I click homework tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Group name"});
+                table10.AddRow(new string[] {
+                            "Bryaka2"});
+#line 10
+testRunner.When("I fill in all the fields in page and choose teacher and tyutor", ((string)(null)), table10, "When ");
+#line hidden
+#line 13
+testRunner.And("Click on  \"Save\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 14
+testRunner.And("Click to button \"Выйти\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 15
+testRunner.And("Auth as teacher", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 16
+testRunner.And("I click \"Домашнее задание\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
                             "DateOfIssue",
                             "DeliveryDate",
                             "Name",
                             "Description",
-                            "Link",
-                            "AddLink"});
-#line 13
-testRunner.And("get page for send homework", ((string)(null)), table11, "And ");
+                            "Link"});
+                table11.AddRow(new string[] {
+                            "12.12.2022",
+                            "22.12.2022",
+                            "Проектики",
+                            "Написать 100 проектиков",
+                            "Link"});
+#line 17
+testRunner.When("I click get page for send homework", ((string)(null)), table11, "When ");
 #line hidden
-#line 15
-testRunner.And("I add homework link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 16
-testRunner.Then("I get a notification about a homework status change", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 20
+testRunner.Then("I click \"Домашнее задание\" tab and see created homework", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

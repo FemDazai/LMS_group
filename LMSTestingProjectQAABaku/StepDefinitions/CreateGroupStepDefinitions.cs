@@ -29,7 +29,7 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             _authPage.EnterPassword("marina123456");
             _authPage.ClickAuthButton();
 
-            Thread.Sleep(3000);
+            Thread.Sleep(500);
         }
 
         [Given(@"Go to the tab ""([^""]*)""")]

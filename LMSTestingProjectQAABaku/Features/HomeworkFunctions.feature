@@ -3,14 +3,18 @@
 A short summary of the feature
 
 
-Scenario: As student send homework
+Scenario: As teacher add homework
 Given Open auth web page
-And Fill form
-| Email                    | Password  |
-| perojoknebulka@gmail.com | 123456789 |
-And Click sign in button
-When I click homework tab 
-And get page for send homework
-| DateOfIssue | DeliveryDate | Name | Description | Link | AddLink |
-And I add homework link
-Then I get a notification about a homework status change
+And Log in as manager
+And Go to the tab "Создать группу" 
+When I fill in all the fields in page and choose teacher and tyutor
+	| Group name  |
+	| Bryaka2     |
+And Click on  "Save" button
+And Click to button "Выйти"
+And Auth as teacher
+And I click "Домашнее задание" tab 
+When I click get page for send homework
+| DateOfIssue | DeliveryDate | Name      | Description             | Link |
+| 12.12.2022  | 22.12.2022   | Проектики | Написать 100 проектиков | Link |
+Then I click "Домашнее задание" tab and see created homework
