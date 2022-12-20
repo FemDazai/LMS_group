@@ -80,15 +80,15 @@ namespace LMSTestingProjectQAABaku.Features
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Put a photo as a student  //Поставить фотографию как студент")]
+        [Xunit.SkippableFactAttribute(DisplayName="Changed password as a student")]
         [Xunit.TraitAttribute("FeatureTitle", "ChangePhoto")]
-        [Xunit.TraitAttribute("Description", "Put a photo as a student  //Поставить фотографию как студент")]
-        public virtual void PutAPhotoAsAStudentПоставитьФотографиюКакСтудент()
+        [Xunit.TraitAttribute("Description", "Changed password as a student")]
+        public virtual void ChangedPasswordAsAStudent()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Put a photo as a student  //Поставить фотографию как студент", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 6
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Changed password as a student", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 18
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -108,105 +108,43 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 7
-    testRunner.Given("Open auth web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 19
+ testRunner.Given("Open  auth web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                             "Email",
                             "Password"});
                 table2.AddRow(new string[] {
                             "perojoknebulka@gmail.com",
-                            "123456789"});
-#line 8
- testRunner.And("Fill form", ((string)(null)), table2, "And ");
-#line hidden
-#line 11
- testRunner.And("Open the account setup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 12
-    testRunner.When("Click on \"Upload a new photo\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 13
- testRunner.And("Open a window, that shows image formats and click on the \"select file\" button  //" +
-                        "Открыть окно с форматами изображений и нажать на кнопку \"Выбрать файл\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 14
- testRunner.And("Select file and click on the \"open\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 15
- testRunner.And("Select the size of the photo and click on the save button  //Выбрать область фото" +
-                        "графии и нажать на кнопку сохранить", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 16
- testRunner.Then("Show uploaded profile picture", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Changed password as a student")]
-        [Xunit.TraitAttribute("FeatureTitle", "ChangePhoto")]
-        [Xunit.TraitAttribute("Description", "Changed password as a student")]
-        public virtual void ChangedPasswordAsAStudent()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Changed password as a student", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 18
- this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 19
- testRunner.Given("Open auth web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Email",
-                            "Password"});
-                table3.AddRow(new string[] {
-                            "perojoknebulka@gmail.com",
-                            "123456789"});
+                            "987654321"});
 #line 20
- testRunner.And("Fill form", ((string)(null)), table3, "And ");
+ testRunner.When("Fill auth form", ((string)(null)), table2, "When ");
 #line hidden
 #line 23
- testRunner.And("Open account setup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Click \"Войти\"  button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 24
- testRunner.When("Where the password caption click on the pen icon  //Где надпись пароль нажать на " +
-                        "значок ручка", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("Click on profile picture", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+#line 25
+ testRunner.And("Where the password caption click on the pen icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Old password",
                             "New password",
                             "Repeat new password"});
-                table4.AddRow(new string[] {
-                            "123456789",
+                table3.AddRow(new string[] {
                             "987654321",
-                            "987654321"});
-#line 25
- testRunner.And("Fill form", ((string)(null)), table4, "And ");
-#line hidden
-#line 28
- testRunner.And("Click on the save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+                            "123456789",
+                            "123456789"});
+#line 26
+ testRunner.And("Fill  form", ((string)(null)), table3, "And ");
 #line hidden
 #line 29
- testRunner.Then("Get a new profile password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("Click on the \"Сохранить\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 30
+ testRunner.Then("I should see the username \"Иван\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

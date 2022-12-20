@@ -7,6 +7,7 @@ namespace LMSTestingProjectQAABaku.Pages
         public IWebElement TextBoxPasswordForAuth => _driver.FindElement(By.XPath(@"//input[@class='form-input custom-password']"));
         public IWebElement TextBoxUserName => _driver.FindElement(By.XPath(@"//span[@class='avatar-name transition-styles']"));
         public IWebElement ButtonForAuth => _driver.FindElement(By.XPath(@"//button[@class='sc-bczRLJ iJvUkY btn btn-fill flex-container']"));
+        public IWebElement PictureButton => _driver.FindElement(By.XPath(@"/html/body/div/div/aside/div/div[1]/div[2]"));
 
         public override void Open()
         {
@@ -33,6 +34,10 @@ namespace LMSTestingProjectQAABaku.Pages
         public string GetButtonByName()
         {
             return TextBoxUserName.Text;
+        }
+        public void ClickOnPicture()
+        {
+            PictureButton.Click();
         }
     }
 }
