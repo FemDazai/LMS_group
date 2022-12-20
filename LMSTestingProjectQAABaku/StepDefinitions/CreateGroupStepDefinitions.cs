@@ -12,6 +12,7 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         AuthPage _authPage;
         CreateGroupsPage _createGroupsPage;
         ManagerMenuPage _managerMenuPage;
+        GroupsPage _groupsPage; 
 
         public CreateGroupStepDefinitions()
         {
@@ -61,8 +62,10 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
 
         [Then(@"The created group will appear in the list of groups")]
         public void ThenTheCreatedGroupWillAppearInTheListOfGroups()
-        {       
-            string exception = "Bryaka2";
+        {
+            _groupsPage.ButtonGroupName();
+
+            string exception = "Шумные дети - группа1";
             string actual= _createGroupsPage.GroupNameTitle();
             Assert.Equal(exception, actual);
 
