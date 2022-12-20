@@ -111,14 +111,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given("Open auth web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
                             "Email",
                             "Password"});
-                table12.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "perojoknebulka@gmail.com",
                             "123456789"});
 #line 7
- testRunner.And("Fill form", ((string)(null)), table12, "And ");
+ testRunner.And("Fill form", ((string)(null)), table11, "And ");
 #line hidden
 #line 10
  testRunner.And("Click sign in button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -126,24 +126,24 @@ this.ScenarioInitialize(scenarioInfo);
 #line 11
  testRunner.And("Click on the \"Занятия\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
                             "Lesson number",
                             "Class date",
                             "Name of the lesson"});
 #line 12
- testRunner.And("get a list of all activities", ((string)(null)), table13, "And ");
+ testRunner.And("get a list of all activities", ((string)(null)), table12, "And ");
 #line hidden
 #line 14
 testRunner.When("I click specifical classes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
                             "Lesson number",
                             "Class date",
                             "Name of the lesson",
                             "Link on video",
                             "additional material"});
 #line 15
-testRunner.Then("I should get a page where info about specific classes", ((string)(null)), table14, "Then ");
+testRunner.Then("I should get a page where info about specific classes", ((string)(null)), table13, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
