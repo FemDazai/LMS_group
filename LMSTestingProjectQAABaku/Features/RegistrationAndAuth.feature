@@ -15,5 +15,5 @@ Scenario: Registration as a student
 #>>>>>>> Stashed changes
 	And Click to checkbox button
 	And Click the "Зарегистрироваться" button  
-    Then I should be notified "Добро пожаловать!!" 
+    Then I should be notified "Чот наебнулось(" 
 

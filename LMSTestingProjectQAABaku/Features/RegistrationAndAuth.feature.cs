@@ -161,8 +161,8 @@ this.ScenarioInitialize(scenarioInfo);
 #line 17
  testRunner.And("Click the \"Зарегистрироваться\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 18
-    testRunner.Then("I should be notified \"Добро пожаловать!!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 13
+    testRunner.Then("I should be notified \"Чот наебнулось(\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

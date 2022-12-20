@@ -5,6 +5,7 @@ A short summary of the feature
 @tag1
 Scenario: As manager set role from teacher
  Given Request  as student
+ And Open auth web page 
  When Auth  as teacher
  And Click button "Войти"
  And Click to the role button

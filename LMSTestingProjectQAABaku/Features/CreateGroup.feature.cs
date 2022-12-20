@@ -124,8 +124,8 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Group name"});
-                table4.AddRow(new string[] {
-                            "Bryaka2"});
+                table5.AddRow(new string[] {
+                            "Шумные дети - группа1"});
 #line 11
  testRunner.When("I fill in all the fields in page and choose teacher and tyutor", ((string)(null)), table4, "When ");
 #line hidden

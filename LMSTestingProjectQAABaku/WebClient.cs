@@ -19,7 +19,8 @@ namespace LMSTestingProjectQAABaku
             HttpRequestMessage message = new HttpRequestMessage()
             {
                 Method = HttpMethod.Post,
-                RequestUri = new System.Uri($"https://piter-education.ru:7070/api/Users/{id}/role/{role}"),
+                RequestUri = new System.Uri($"https://piter-education.ru:7070" +
+                $"/api/Users/{id}/role/{role}"),
             };
             HttpResponseMessage responseMessage = client.Send(message);
             HttpStatusCode actualCode = responseMessage.StatusCode;
