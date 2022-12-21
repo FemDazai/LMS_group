@@ -13,4 +13,4 @@ Scenario: As student choose specific classes
  | Lesson number | Class date | Name of the lesson |
 When I click specifical classes
 Then I should get a page where info about specific classes
-| Lesson number | Class date | Name of the lesson | Link on video| additional material|
+ | Lesson number | Class date | Name of the lesson | Link on video| additional material|

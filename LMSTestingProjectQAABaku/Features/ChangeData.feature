@@ -16,8 +16,8 @@ A short summary of the feature
 	#Then Show uploaded profile picture
 
 Scenario: Changed password as a student
-	Given Open  auth web page
-	When Fill auth form
+	Given Open auth web page
+	And Fill form
 	| Email                    | Password  |
 	| perojoknebulka@gmail.com | 987654321 |
 	And Click "Войти"  button
