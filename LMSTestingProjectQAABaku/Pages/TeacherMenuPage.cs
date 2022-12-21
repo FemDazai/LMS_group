@@ -20,8 +20,8 @@ namespace LMSTestingProjectQAABaku.Pages
         public IWebElement ButtonAddTask => _driver.FindElement(By.XPath(@"//button[@class='sc-bczRLJ iJvUkY btn btn-fill flex-container']"));
         public IWebElement ButtonSelectGroup => _driver.FindElement(By.XPath(@"//span[@class='radio-text']"));
         public IWebElement FieldEnterTitle => _driver.FindElement(By.XPath(@"//input[@placeholder='Введите название']"));
-        public IWebElement TaskAssignmentDate => _driver.FindElement(By.XPath(@"//input[@value='18.12.2022']"));
-        public IWebElement TaskDueDate => _driver.FindElement(By.XPath(@"//div[@class='date-picker form-input ']/following::input[1]"));
+        public IWebElement TaskAssignmentDate => _driver.FindElement(By.XPath(@"//div[text()='Дата выдачи задания']/child::div/child::div/child::div/child::input"));
+        public IWebElement TaskDueDate => _driver.FindElement(By.XPath(@"//div[text()='Срок сдачи задания']/child::div/child::div/child::div/child::input"));
         public IWebElement FieldEnterDescriptionTask => _driver.FindElement(By.XPath(@"//textarea[@placeholder='Введите текст']"));
         public IWebElement FieldUsefulLinks => _driver.FindElement(By.XPath(@"//textarea[@class='form-input_link form-input']"));
         public IWebElement ButtonPublish => _driver.FindElement(By.XPath(@"//button[@class='sc-bczRLJ iJvUkY btn btn-fill flex-container']"));
@@ -52,7 +52,6 @@ namespace LMSTestingProjectQAABaku.Pages
         {
             ButtonAddTask.Click();
         }
-
         public void GetClickButtonSelectGroup()
         {
             ButtonSelectGroup.Click();
@@ -72,16 +71,16 @@ namespace LMSTestingProjectQAABaku.Pages
         public void EnterTaskAssignmentDate(string text)
         {
             Actions action = new Actions(_driver);
-            action.DoubleClick(FieldEnterTitle).Build().Perform();
-            FieldEnterTitle.SendKeys(Keys.Backspace);
-            FieldEnterTitle.SendKeys(text);
+            action.DoubleClick(TaskAssignmentDate).Build().Perform();
+            TaskAssignmentDate.SendKeys(Keys.Backspace);
+            TaskAssignmentDate.SendKeys(text);
         }
         public void EnterTaskDueDate(string text)
         {
             Actions action = new Actions(_driver);
-            action.DoubleClick(FieldEnterDescriptionTask).Build().Perform();
-            FieldEnterDescriptionTask.SendKeys(Keys.Backspace);
-            FieldEnterDescriptionTask.SendKeys(text);
+            action.DoubleClick(TaskDueDate).Build().Perform();
+            TaskDueDate.SendKeys(Keys.Backspace);
+            TaskDueDate.SendKeys(text);
         }
         public void EnterFieldUsefulLinks(string text)
         {

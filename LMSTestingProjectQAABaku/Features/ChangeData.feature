@@ -15,7 +15,7 @@ Scenario: Put a photo as a student  //Поставить фотографию к
 	And Select the size of the photo and click on the save button  //Выбрать область фотографии и нажать на кнопку сохранить
 	Then Show uploaded profile picture
 
-	Scenario: Changed password as a student
+Scenario: Changed password as a student
 	Given Open auth web page
 	And Fill form
 	| Email                    | Password  |
