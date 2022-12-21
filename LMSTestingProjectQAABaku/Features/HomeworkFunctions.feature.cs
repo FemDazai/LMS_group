@@ -117,12 +117,14 @@ testRunner.And("Log in as manager", ((string)(null)), ((TechTalk.SpecFlow.Table)
 #line 8
 testRunner.And("Go to the tab \"Создать группу\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
                             "Group name"});
-                table10.AddRow(new string[] {
+                table9.AddRow(new string[] {
                             "Bryaka2"});
 #line 9
 testRunner.When("I fill in all the fields in page and choose teacher and tyutor", ((string)(null)), table10, "When ");
+#line 10
+testRunner.When("I fill in all the fields in page and choose teacher and tyutor", ((string)(null)), table9, "When ");
 #line hidden
 #line 12
 testRunner.And("Click on  \"Save\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -136,7 +138,7 @@ testRunner.And("Auth as teacher", ((string)(null)), ((TechTalk.SpecFlow.Table)(n
 #line 15
 testRunner.And("I click \"Домашнее задание\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                             "DateOfIssue",
                             "DeliveryDate",
                             "Name",
@@ -144,12 +146,17 @@ testRunner.And("I click \"Домашнее задание\" tab", ((string)(null
                             "Link"});
                 table11.AddRow(new string[] {
                             "21.12.2022",
+                table10.AddRow(new string[] {
+                            "12.12.2022",
                             "22.12.2022",
                             "Проектики",
                             "Написать 100 проектиков",
                             "https://piter-education.ru:7074/homeworks"});
 #line 16
 testRunner.When("I click get page for send homework", ((string)(null)), table11, "When ");
+                            "Link"});
+#line 17
+testRunner.When("I click get page for send homework", ((string)(null)), table10, "When ");
 #line hidden
 #line 19
 testRunner.Then("I click \"Домашнее задание\" tab and see created homework", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
