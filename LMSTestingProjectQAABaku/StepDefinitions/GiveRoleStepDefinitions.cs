@@ -22,6 +22,20 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             //_authPage.Open();
             //_authPage.GetCertificateOfSafety();
             WebClient wClient = new WebClient();
+            RequestModelApi requestStudentModel = new RequestModelApi()
+            {
+                firstName = "Родион",
+                lastName = "Раскольников",
+                patronymic = "Романович",
+                email = "rodionraskol@gmail.com",
+                username = "Rodion",
+                password = "123456789",
+                city = "SaintPetersburg",
+                birthDate = "15.12.1999",
+                gitHubAccount = "github.com/Rodionchik",
+                phoneNumber = "+72222222221"
+            };
+            int Studentid = wClient.GetId(requestStudentModel);
             RequestModelApi requestTeacherApiModel = new RequestModelApi()
             {
                 firstName = "Вилли",
