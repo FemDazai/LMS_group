@@ -70,5 +70,21 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             Assert.Equal(expected, actual);
         }
 
+        [Given(@"Fill form")]
+        public void FillFormWithWrongEmail(Table table)
+        {
+            var _table = table.CreateInstance<AuthModel>();
+            _authPage.EnterEmail(_table.Email);
+            _authPage.EnterPassword(_table.Password);
+        }
+
+        [Then(@"I shold to see  the notification  ""([^""]*)""")]
+        public void ThenISholdToSeeTheNotifications(string expected)
+        {
+            string actual = _authPage.GetNotificationWrongEmail();
+            Assert.Equal(expected, actual);
+        }
+
+
     }
 }

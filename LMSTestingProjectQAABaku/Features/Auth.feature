@@ -22,4 +22,15 @@ Scenario: Negative auth without password
 	And I shold to see  the notification "Введите пароль"
 
 
+Scenario: Negative auth with wrong email
+Given Open auth web page
+    And Fill form
+    | Email               | Password    |
+    | marinaa@example.com |marina123456 |
+    When Click sign in  button
+    Then I stay on the login  page
+    And I shold to see  the notification  "Неправильные логин или пароль"
+
+
+
      
