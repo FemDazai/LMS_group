@@ -10,12 +10,10 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
     public class AuthStepDefinitions
     {
         AuthPage _authPage;
-        RegistrationPage _registrationPage; 
 
         public AuthStepDefinitions()
         {
            _authPage = new AuthPage();
-            _registrationPage = new RegistrationPage();
         }
 
         [Given(@"Open auth web page")]
@@ -58,14 +56,16 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         [Then(@"I stay on the login  page")]
         public void ThenIStayOnTheLoginPage()
         {
-            string expected = "https://piter-education.ru:7074/";
-            string actual = .Open();
+            DriverStorage storage = DriverStorage.Get();
+            string expected = "https://piter-education.ru:7074/login";
+            string actual = storage.Driver.Url;
             Assert.Equal(expected, actual);
         }
 
         [Then(@"I shold to see  the notification ""([^""]*)""")]
         public void ThenISholdToSeeTheNotification(string expected)
         {
+            
             string actual = _authPage.GetNotificationWrongPassword();
             Assert.Equal(expected, actual);
         }

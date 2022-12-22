@@ -220,13 +220,13 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         }
 
         [Then(@"I have to go to another page")]
-        public void ThenIHaveToGoToAnotherPage()
-        {
-            DriverStorage storage = DriverStorage.GetInstance();
-            string expected = Urls.HomePage;
-            string actual = storage.Driver.Url;
-            Assert.AreNotEqual(expected, actual);
-        }
+        //public void ThenIHaveToGoToAnotherPage()
+        //{
+        //    DriverStorage storage = DriverStorage.GetInstance();
+        //    string expected = Urls.HomePage;
+        //    string actual = storage.Driver.Url;
+        //    Assert.AreNotEqual(expected, actual);
+        //}
 
         [Then(@"I should see the status of the completed task as ""([^""]*)""")]
         public void ThenIShouldSeeTheStatusOfTheCompletedTaskAs(string проверить)
