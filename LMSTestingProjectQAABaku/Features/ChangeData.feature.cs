@@ -80,15 +80,15 @@ namespace LMSTestingProjectQAABaku.Features
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Put a photo as a student  //Поставить фотографию как студент")]
+        [Xunit.SkippableFactAttribute(DisplayName="Changed profil foto as a student")]
         [Xunit.TraitAttribute("FeatureTitle", "ChangePhoto")]
-        [Xunit.TraitAttribute("Description", "Put a photo as a student  //Поставить фотографию как студент")]
-        public virtual void PutAPhotoAsAStudentПоставитьФотографиюКакСтудент()
+        [Xunit.TraitAttribute("Description", "Changed profil foto as a student")]
+        public virtual void ChangedProfilFotoAsAStudent()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Put a photo as a student  //Поставить фотографию как студент", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 6
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Changed profil foto as a student", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 18
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -108,8 +108,8 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 7
-    testRunner.Given("Open auth web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 19
+ testRunner.Given("Open auth web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Email",
@@ -117,22 +117,22 @@ this.ScenarioInitialize(scenarioInfo);
                 table3.AddRow(new string[] {
                             "perojoknebulka@gmail.com",
                             "987654321"});
-#line 8
+#line 20
  testRunner.And("Fill form", ((string)(null)), table3, "And ");
 #line hidden
-#line 11
+#line 23
  testRunner.And("Open the account setup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 12
+#line 24
     testRunner.When("Click on \"Upload a new photo\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 13
+#line 25
  testRunner.Given("Select the desired file and save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 14
+#line 26
  testRunner.When("Show select file click on the \"Сохранить\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 15
+#line 27
  testRunner.Then("Show uploaded profile picture in user page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -147,8 +147,8 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Changed password as a student", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 17
- this.ScenarioInitialize(scenarioInfo);
+#line 29
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -167,7 +167,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 18
+#line 30
  testRunner.Given("Open auth web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
@@ -176,13 +176,13 @@ this.ScenarioInitialize(scenarioInfo);
                 table4.AddRow(new string[] {
                             "perojoknebulka@gmail.com",
                             "123456789"});
-#line 19
+#line 31
  testRunner.And("Fill form", ((string)(null)), table4, "And ");
 #line hidden
-#line 22
+#line 34
  testRunner.And("Open account setup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 23
+#line 35
  testRunner.When("Where the password caption click on the pen icon  //Где надпись пароль нажать на " +
                         "значок ручка", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
@@ -194,13 +194,13 @@ this.ScenarioInitialize(scenarioInfo);
                             "123456789",
                             "987654321",
                             "987654321"});
-#line 24
+#line 36
  testRunner.And("Fill form", ((string)(null)), table5, "And ");
 #line hidden
-#line 27
+#line 39
  testRunner.And("Click on the save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 28
+#line 40
  testRunner.Then("Get a new profile password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

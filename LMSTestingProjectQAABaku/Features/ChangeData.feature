@@ -15,7 +15,7 @@ A short summary of the feature
 	#And Select the size of the photo and click on the save button  //Выбрать область фотографии и нажать на кнопку сохранить
 	#Then Show uploaded profile picture
 
-Scenario: Changed password as a student
+Scenario: Changed profil foto as a student
 	Given Open auth web page
 	And Fill form
 	| Email                    | Password  |
@@ -26,7 +26,7 @@ Scenario: Changed password as a student
 	When Show select file click on the "Сохранить" button
 	Then Show uploaded profile picture in user page
 
-	Scenario: Changed password as a student
+Scenario: Changed password as a student
 	Given Open auth web page
 	And Fill form
 	| Email                    | Password  |
