@@ -2,6 +2,7 @@ using TechTalk.SpecFlow.Assist;
 using LMSTestingProjectQAABaku.Models;
 using LMSTestingProjectQAABaku.Pages;
 using static System.Net.Mime.MediaTypeNames;
+using LMSTestingProjectQAABaku.Drivers;
 
 namespace LMSTestingProjectQAABaku.StepDefinitions
 {
@@ -9,10 +10,12 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
     public class AuthStepDefinitions
     {
         AuthPage _authPage;
+        RegistrationPage _registrationPage; 
 
         public AuthStepDefinitions()
         {
            _authPage = new AuthPage();
+            _registrationPage = new RegistrationPage();
         }
 
         [Given(@"Open auth web page")]
@@ -43,5 +46,29 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             string actual = _authPage.GetButtonByName();
             Assert.Equal(expected, actual);
         }
+
+        [Given(@"Fill  form")]
+        public void GivenFillForm(Table table)
+        {
+            var _table = table.CreateInstance<AuthModel>();
+            _authPage.EnterEmail(_table.Email);
+            _authPage.EnterPassword(_table.Password);
+        }
+
+        [Then(@"I stay on the login  page")]
+        public void ThenIStayOnTheLoginPage()
+        {
+            string expected = "https://piter-education.ru:7074/";
+            string actual = .Open();
+            Assert.Equal(expected, actual);
+        }
+
+        [Then(@"I shold to see  the notification ""([^""]*)""")]
+        public void ThenISholdToSeeTheNotification(string expected)
+        {
+            string actual = _authPage.GetNotificationWrongPassword();
+            Assert.Equal(expected, actual);
+        }
+
     }
 }
