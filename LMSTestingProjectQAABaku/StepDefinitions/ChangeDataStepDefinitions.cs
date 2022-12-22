@@ -8,12 +8,12 @@ using TechTalk.SpecFlow.Assist;
 namespace LMSTestingProjectQAABaku.StepDefinitions
 {
     [Binding]
-    public class ChangePhotoStepDefinitions
+    public class ChangeDataStepDefinitions
     {
         AuthPage _authPage;
         SettingsPage _settingsPage;
         ChangePasswordPage _changePasswordPage;
-        public ChangePhotoStepDefinitions()
+        public ChangeDataStepDefinitions()
         {
             _authPage = new AuthPage();
             _settingsPage = new SettingsPage();
