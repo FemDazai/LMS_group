@@ -122,8 +122,6 @@ testRunner.And("Go to the tab \"Создать группу\"", ((string)(null))
                 table11.AddRow(new string[] {
                             "Bryaka2"});
 #line 9
-testRunner.When("I fill in all the fields in page and choose teacher and tyutor", ((string)(null)), table10, "When ");
-#line 10
 testRunner.When("I fill in all the fields in page and choose teacher and tyutor", ((string)(null)), table11, "When ");
 #line hidden
 #line 12
@@ -144,19 +142,13 @@ testRunner.And("I click \"Домашнее задание\" tab", ((string)(null
                             "Name",
                             "Description",
                             "Link"});
-                table11.AddRow(new string[] {
-                            "21.12.2022",
-                table10.AddRow(new string[] {
                 table12.AddRow(new string[] {
-                            "12.12.2022",
+                            "21.12.2022",
                             "22.12.2022",
                             "Проектики",
                             "Написать 100 проектиков",
                             "https://piter-education.ru:7074/homeworks"});
 #line 16
-testRunner.When("I click get page for send homework", ((string)(null)), table11, "When ");
-                            "Link"});
-#line 17
 testRunner.When("I click get page for send homework", ((string)(null)), table12, "When ");
 #line hidden
 #line 19
@@ -206,12 +198,12 @@ testRunner.And("I click \"Домашнее задание\"", ((string)(null)), 
 #line 25
 testRunner.And("Click in button \"к заданию\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
                             "LinkGitHub"});
-                table12.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "https://github.com/El-ItsMe/Project-Test-1"});
 #line 26
-testRunner.When("I fill in all the fields in page", ((string)(null)), table12, "When ");
+testRunner.When("I fill in all the fields in page", ((string)(null)), table13, "When ");
 #line hidden
 #line 29
 testRunner.And("Click on send button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

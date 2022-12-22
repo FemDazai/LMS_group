@@ -26,5 +26,10 @@ namespace LMSTestingProjectQAABaku.Drivers
 
             return _driverStorage;
         }
+
+        internal static DriverStorage GetInstance()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -25,7 +25,6 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         public void GivenLogInAsManager()
         {
             _authPage.Open();
-
             _authPage.EnterEmail("marina@example.com");
             _authPage.EnterPassword("marina123456");
             _authPage.ClickAuthButton();

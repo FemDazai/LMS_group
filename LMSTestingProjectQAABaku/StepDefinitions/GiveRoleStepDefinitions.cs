@@ -9,7 +9,10 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
     {
         AuthPage _authPage;
         TeacherMenuPage _teacherMenuPage;
-
+        private int _idTeacher;
+        private int _idMethodist;
+        private int _idTutor;
+        private string _managerToken;
         public GiveRoleStepDefinitions()
         { 
             _authPage = new AuthPage();
@@ -19,7 +22,9 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         [Given(@"Request  as student")]
         public void GivenRequestAsStudent()
         {
-            //_authPage.Open();
+
+
+            /*//_authPage.Open();
             //_authPage.GetCertificateOfSafety();
             WebClient wClient = new WebClient();
             RequestModelApi requestStudentModel = new RequestModelApi()
@@ -89,8 +94,8 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             string actualToken = wClient.Auth(authRequestModel);
             wClient.SetRole(actualToken, Teacherid, "Teacher");
             wClient.SetRole(actualToken, Tyutorid, "Tyutor");
-            wClient.SetRole(actualToken, Methodistid, "Methodist");
-        }    
+            wClient.SetRole(actualToken, Methodistid, "Methodist");*/
+        }
 
         [When(@"Auth  as teacher")]
         public void WhenAuthAsTeacher()

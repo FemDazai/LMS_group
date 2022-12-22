@@ -30,7 +30,7 @@ namespace LMSTestingProjectQAABaku.Pages
         public void ClickAuthButton()
         {
             ButtonForAuth.Click();
-            //Thread.Sleep(1000);
+            Thread.Sleep(1000);
 
         }
 
