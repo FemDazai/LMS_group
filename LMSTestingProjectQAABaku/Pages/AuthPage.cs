@@ -8,6 +8,8 @@ namespace LMSTestingProjectQAABaku.Pages
         public IWebElement TextBoxUserName => _driver.FindElement(By.XPath(@"//span[@class='avatar-name transition-styles']"));
         public IWebElement ButtonForAuth => _driver.FindElement(By.XPath(@"//button[@class='sc-bczRLJ iJvUkY btn btn-fill flex-container']"));
         public IWebElement PictureButton => _driver.FindElement(By.XPath(@"/html/body/div/div/aside/div/div[1]/div[2]"));
+        public IWebElement NotificationWrongPasswordInput => _driver.FindElement(By.XPath(@"//div[text()=""Введите пароль""]"));
+
 
         public override void Open()
         {
@@ -28,16 +30,23 @@ namespace LMSTestingProjectQAABaku.Pages
         public void ClickAuthButton()
         {
             ButtonForAuth.Click();
-            Thread.Sleep(1000);
+            //Thread.Sleep(1000);
+
         }
 
         public string GetButtonByName()
         {
             return TextBoxUserName.Text;
         }
+
         public void ClickOnPicture()
         {
             PictureButton.Click();
+        }
+
+        public string GetNotificationWrongPassword()
+        {
+            return NotificationWrongPasswordInput.Text;
         }
     }
 }
