@@ -117,9 +117,9 @@ testRunner.And("Log in as manager", ((string)(null)), ((TechTalk.SpecFlow.Table)
 #line 8
 testRunner.And("Go to the tab \"Создать группу\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "Group name"});
-                table11.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "Bryaka2"});
 #line 9
 testRunner.When("I fill in all the fields in page and choose teacher and tyutor", ((string)(null)), table11, "When ");
@@ -136,7 +136,7 @@ testRunner.And("Auth as teacher", ((string)(null)), ((TechTalk.SpecFlow.Table)(n
 #line 15
 testRunner.And("I click \"Домашнее задание\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
                             "DateOfIssue",
                             "DeliveryDate",
                             "Name",
