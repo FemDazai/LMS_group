@@ -15,16 +15,16 @@ A short summary of the feature
 	#And Select the size of the photo and click on the save button  //Выбрать область фотографии и нажать на кнопку сохранить
 	#Then Show uploaded profile picture
 
-Scenario: Changed profil foto as a student
-	Given Open auth web page
-	And Fill form
-	| Email                    | Password  |
-	| perojoknebulka@gmail.com | 987654321 |
-	And Open the account setup page
-    When Click on "Upload a new photo"
-	Given Select the desired file and save
-	When Show select file click on the "Сохранить" button
-	Then Show uploaded profile picture in user page
+#Scenario: Changed profil foto as a student
+#	Given Open auth web page
+#	And Fill form
+#	| Email                    | Password  |
+#	| perojoknebulka@gmail.com | 987654321 |
+#	And Open the account setup page
+#    When Click on "Upload a new photo"
+#	Given Select the desired file and save
+#	When Show select file click on the "Сохранить" button
+#	Then Show uploaded profile picture in user page
 
 Scenario: Changed password as a student
 	Given Open auth web page
