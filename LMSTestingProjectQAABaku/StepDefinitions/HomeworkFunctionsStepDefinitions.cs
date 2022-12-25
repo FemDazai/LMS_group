@@ -89,7 +89,6 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         public void WhenIClickButton(string опубликовать)
         {
             _teacherMenuPage.ClickButtonPublish();
-            Thread.Sleep(500);
         }
 
         [Then(@"I click ""([^""]*)"" tab and see created homework")]
