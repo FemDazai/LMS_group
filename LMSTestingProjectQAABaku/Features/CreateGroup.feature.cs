@@ -122,12 +122,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 10
     testRunner.And("Go to the tab \"Создать группу\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "Group name"});
-                table3.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "Шумные дети - группа1"});
 #line 11
- testRunner.When("I fill in all the fields in page and choose teacher and tyutor", ((string)(null)), table3, "When ");
+ testRunner.When("I fill in all the fields in page and choose teacher and tyutor", ((string)(null)), table6, "When ");
 #line hidden
 #line 14
  testRunner.And("Click on  \"Save\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

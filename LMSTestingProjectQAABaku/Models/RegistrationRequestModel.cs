@@ -16,5 +16,10 @@ namespace LMSTestingProjectQAABaku.Models
         public string RepeatPassword { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
+
+        internal object ToList()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
