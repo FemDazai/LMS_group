@@ -6,15 +6,15 @@ using Dapper;
 
 namespace LMSTestingProjectQAABaku.Support
 {
-    [Binding]
-    public sealed class Hooks1
-    {
-        [AfterScenario]
-        public void AfterScenario()
-        {
-            DriverStorage.Get().Driver.Close();
-        }
-    }
+    //[Binding]
+    //public sealed class Hooks1
+    //{
+    //    [AfterScenario]
+    //    public void AfterScenario()
+    //    {
+    //        DriverStorage.Get().Driver.Close();
+    //    }
+    //}
     //public class DBCleaner
     //{
     //    [AfterScenario]

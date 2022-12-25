@@ -16,7 +16,7 @@ namespace LMSTestingProjectQAABaku.Pages
 
         public override void Open()
         {
-            //_driver.Navigate().GoToUrl("https://piter-education.ru:7074/login");
+            _driver.Navigate().GoToUrl("https://piter-education.ru:7074/login");
         }
 
         public void ClickCreateGroupButton()
@@ -28,8 +28,8 @@ namespace LMSTestingProjectQAABaku.Pages
 
         public void ClickGroupButton()
         {
-            //Actions action = new Actions(_driver);
-            //action.DoubleClick(ButtonForGroupList).Build().Perform();
+            Actions action = new Actions(_driver);
+            action.DoubleClick(ButtonForGroupList).Build().Perform();
             ButtonForGroupList.Click();
         }
         public void ClickButtonExit()

@@ -227,7 +227,6 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         //    string actual = storage.Driver.Url;
         //    Assert.AreNotEqual(expected, actual);
         //}
-
         [Then(@"I should see the status of the completed task as ""([^""]*)""")]
         public void ThenIShouldSeeTheStatusOfTheCompletedTaskAs(string проверить)
         {
