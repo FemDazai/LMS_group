@@ -21,7 +21,7 @@ namespace LMSTestingProjectQAABaku
             HttpRequestMessage message = new HttpRequestMessage()
             {
                 Method = HttpMethod.Post,
-                RequestUri = new System.Uri($"https://piter-education.ru:7070" +$"/api/Users/{id}/role/{role}"),
+                RequestUri = new System.Uri($"https://piter-education.ru:7070/api/Users/{id}/role/{role}"),
             };
             HttpResponseMessage responseMessage = client.Send(message);
             HttpStatusCode actualCode = responseMessage.StatusCode;
@@ -48,7 +48,7 @@ namespace LMSTestingProjectQAABaku
             return token;
         }
 
-        public int GetId(RequestModelApi model)
+        public int GetUserId(RequestModelApi model)
         {
             HttpStatusCode expectedCode = HttpStatusCode.Created;
             string json = JsonSerializer.Serialize<RequestModelApi>(model);
@@ -62,7 +62,6 @@ namespace LMSTestingProjectQAABaku
                 Content = new StringContent(json, Encoding.UTF8, "application/json")
             };
             HttpResponseMessage responseMessage = client.Send(message);
-            HttpStatusCode actualCode = responseMessage.StatusCode;
             string responseJson = responseMessage.Content.ReadAsStringAsync().Result;
             RegistrationResponseModel InfoUser = JsonSerializer.Deserialize<RegistrationResponseModel>(responseJson)!;
 
@@ -86,9 +85,31 @@ namespace LMSTestingProjectQAABaku
             HttpResponseMessage responseMessage = client.Send(message);
             HttpStatusCode actualCode = responseMessage.StatusCode;
             string responseJson = responseMessage.Content.ReadAsStringAsync().Result;
-            CreateGroupResponseModelApi InfoUser = JsonSerializer.Deserialize<CreateGroupResponseModelApi>(responseJson)!;
+            CreateGroupResponseModelApi InfoGroup = JsonSerializer.Deserialize<CreateGroupResponseModelApi>(responseJson)!;
 
-            return InfoUser.id;
+            return InfoGroup.id;
+        }
+        
+        public int GetIdCreatedCourse(string token, CreateCourseModelApi model)
+        {
+            HttpStatusCode expectedCode = HttpStatusCode.Created;
+            string json = JsonSerializer.Serialize<CreateCourseModelApi>(model);
+            HttpClientHandler clientHandler = new HttpClientHandler();
+            clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+            HttpClient client = new HttpClient(clientHandler);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            HttpRequestMessage message = new HttpRequestMessage()
+            {
+                Method = HttpMethod.Post,
+                RequestUri = new System.Uri($"https://piter-education.ru:7070/api/Courses"),
+                Content = new StringContent(json, Encoding.UTF8, "application/json")
+            };
+            HttpResponseMessage responseMessage = client.Send(message);
+            HttpStatusCode actualCode = responseMessage.StatusCode;
+            string responseJson = responseMessage.Content.ReadAsStringAsync().Result;
+            CreateCourseResponseModelApi InfoCourse = JsonSerializer.Deserialize<CreateCourseResponseModelApi>(responseJson)!;
+
+            return InfoCourse.id;
         }
 
         public int GetIdTask(string token, TaskRequestModelApi model)
@@ -108,14 +129,15 @@ namespace LMSTestingProjectQAABaku
             HttpResponseMessage responseMessage = client.Send(message);
             HttpStatusCode actualCode = responseMessage.StatusCode;
             string responseJson = responseMessage.Content.ReadAsStringAsync().Result;
-            TasksResponseModelApi InfoUser = JsonSerializer.Deserialize<TasksResponseModelApi>(responseJson)!;
+            TasksResponseModelApi InfoTask = JsonSerializer.Deserialize<TasksResponseModelApi>(responseJson)!;
 
-            return InfoUser.id;
+            return InfoTask.id;
         }
 
-        public int GetCreateHomework(string token, int groupId, int taskId)
+        public int GetCreateHomework(string token, int groupId, int taskId, HomeworkRequestModelApi model)
         {
             HttpStatusCode expectedCode = HttpStatusCode.Created;
+            string json = JsonSerializer.Serialize<HomeworkRequestModelApi>(model);
             HttpClientHandler clientHandler = new HttpClientHandler();
             clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
             HttpClient client = new HttpClient(clientHandler);
@@ -123,7 +145,8 @@ namespace LMSTestingProjectQAABaku
             HttpRequestMessage message = new HttpRequestMessage()
             {
                 Method = HttpMethod.Post,
-                RequestUri = new System.Uri($"https://piter-education.ru:7070/api/Homeworks/group/{groupId}/task/{taskId}")
+                RequestUri = new System.Uri($"https://piter-education.ru:7070/api/Homeworks/group/{groupId}/task/{taskId}"),
+                Content = new StringContent(json, Encoding.UTF8, "application/json")
             };
             HttpResponseMessage responseMessage = client.Send(message);
             HttpStatusCode actualCode = responseMessage.StatusCode;
