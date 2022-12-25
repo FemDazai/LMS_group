@@ -5,9 +5,15 @@ A short summary of the feature
 @Student
 Scenario: Auth
 	Given Open auth web page 
+	#When Click to  the "Регистрация" button
+	#And Fill the regist form
+	#| Surname  | Name  | Patronymic | Birth date | Password  | Repeat password | E-mail                      | Phone         |
+	#| Перошков | Иван  | Булкович   | 01.10.2000 |  | 123456789       | perojoknebulka20@gmail.com | +71234567890  | 
+	#And Click to checkbox button
+	#And Click the "Зарегистрироваться" button  
 	When Fill form
-	| Email                    | Password  |
-	| perojoknebulka@gmail.com | 987654321 |
+	| Email                      | Password  |
+	| perojoknebulka@gmail.com   | 123456789 |
 	And Click sign in  button
 	Then I shold to see the username "Иван"
 

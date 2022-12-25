@@ -118,14 +118,14 @@ this.ScenarioInitialize(scenarioInfo);
                             "Password"});
                 table1.AddRow(new string[] {
                             "perojoknebulka@gmail.com",
-                            "987654321"});
-#line 8
+                            "123456789"});
+#line 14
  testRunner.When("Fill form", ((string)(null)), table1, "When ");
 #line hidden
-#line 11
+#line 17
  testRunner.And("Click sign in  button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 12
+#line 18
  testRunner.Then("I shold to see the username \"Иван\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -142,7 +142,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "tag"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Negative auth without password", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 15
+#line 21
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -162,7 +162,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 16
+#line 22
     testRunner.Given("Open auth web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -171,16 +171,16 @@ this.ScenarioInitialize(scenarioInfo);
                 table2.AddRow(new string[] {
                             "marina@example.com",
                             ""});
-#line 17
+#line 23
  testRunner.And("Fill  form", ((string)(null)), table2, "And ");
 #line hidden
-#line 20
+#line 26
  testRunner.When("Click sign in  button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 21
+#line 27
  testRunner.Then("I stay on the login  page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 22
+#line 28
  testRunner.And("I shold to see  the notification \"Введите пароль\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -195,7 +195,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Negative auth with wrong email", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 25
+#line 31
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -215,7 +215,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 26
+#line 32
 testRunner.Given("Open auth web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
@@ -224,16 +224,16 @@ testRunner.Given("Open auth web page", ((string)(null)), ((TechTalk.SpecFlow.Tab
                 table3.AddRow(new string[] {
                             "marinaa@example.com",
                             "marina123456"});
-#line 27
+#line 33
     testRunner.And("Fill form", ((string)(null)), table3, "And ");
 #line hidden
-#line 30
+#line 36
     testRunner.When("Click sign in  button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 31
+#line 37
     testRunner.Then("I stay on the login  page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 32
+#line 38
     testRunner.And("I shold to see  the notification  \"Неправильные логин или пароль\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
