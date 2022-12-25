@@ -41,6 +41,72 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             _webClient = new WebClient();
         }
 
+        [Given(@"Auth as teacher")]
+        public void GivenAuthAsTeacher()
+        {
+            _authPage.EnterEmail("willywonka20@gmail.com");
+            _authPage.EnterPassword("123456789");
+            Thread.Sleep(500);
+        }
+
+        [Given(@"I click ""([^""]*)"" tab")]
+        public void GivenIClickTab(string p0)
+        {
+            _teacherMenuPage.GetClickButtonHomework();
+            Thread.Sleep(500);
+        }
+
+        [Given(@"I click ""([^""]*)"" button")]
+        public void GivenIClickButton(string p0)
+        {
+            _teacherMenuPage.ClickButtonAddHomework();  
+        }
+
+        [When(@"I fill form  for send homework")]
+        public void WhenIFillFormForSendHomework(Table table)
+        {
+            var _table = table.CreateInstance<AddHomeworkModel>();
+            _teacherMenuPage.EnterTaskAssignmentDate(_table.DateOfIssue);
+            _teacherMenuPage.EnterTaskDueDate(_table.DeliveryDate);
+            _teacherMenuPage.EnterTaskTitle(_table.Name);
+            _teacherMenuPage.EnterFieldDescriptionTask(_table.Description);
+            _teacherMenuPage.EnterFieldUsefulLinks(_table.Link);
+        }
+
+        [When(@"Click select group button")]
+        public void WhenClickSelectGroupButton()
+        {
+            _teacherMenuPage.GetClickButtonSelectGroup();
+        }
+
+        [When(@"Click pin  button")]
+        public void WhenClickPinButton()
+        {
+            _teacherMenuPage.ClickButtonPinLink();
+        }
+
+        [When(@"I click ""([^""]*)"" button")]
+        public void WhenIClickButton(string опубликовать)
+        {
+            _teacherMenuPage.ClickButtonPublish();
+            Thread.Sleep(500);
+        }
+
+        [Then(@"I click ""([^""]*)"" tab and see created homework")]
+        public void ThenIClickTabAndSeeCreatedHomework(string p0)
+        {
+            _teacherMenuPage.GetClickButtonHomework();
+        }
+
+        [Then(@"I should see homework name")]
+        public void ThenIShouldSeeHomeworkName()
+        {
+            string expected = "Проектики";
+            string actual = _teacherMenuPage.GetHomeworkName();
+            Assert.Equal(expected, actual);
+        }
+
+
         //[When(@"Click to button ""([^""]*)""")]
         //public void WhenClickToButton(string выйти)
         //{
@@ -295,7 +361,7 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         {
             AuthRequestModelApi authAsTeacher = new AuthRequestModelApi()
             {
-                Email = "willywonka10@gmail.com",
+                Email = "willywonka17@gmail.com",
                 Password = "123456789"
             };
             IdStorage.CreateInstance().teacherToken = _webClient.Auth(authAsTeacher);

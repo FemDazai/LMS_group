@@ -3,20 +3,31 @@
 A short summary of the feature
 
 Scenario: As teacher add homework
-Given Open auth web page
-And Log in as manager
-And Go to the tab "Создать группу" 
-When I fill in all the fields in page and choose teacher and tyutor
-	| Group name  |
-	| Bryaka2     |
-And Click on  "Save" button
-And Click to button "Выйти"
+Given Registration as student1 api
+And Auth as admin api
+	| Email              | Password     |
+	| marina@example.com | marina123456 |
+And Give student2 teacher role as admin
+And Give student3 tutor role as admin
+And Give student4 methodist role as admin
+And Create courses by admin
+And Create group by admin
+And Add users in group as admin
+And Open auth web page
 And Auth as teacher
-And I click "Домашнее задание" tab 
-When I click get page for send homework
+When Click sign in  button
+ And Click to the role button
+ And Click to  the button teacher
+Given I click "Домашнее задание" tab
+And I click "Добавить задание" button 
+When I fill form  for send homework
 | DateOfIssue | DeliveryDate | Name      | Description             | Link									   |
-| 21.12.2022  | 22.12.2022   | Проектики | Написать 100 проектиков | https://piter-education.ru:7074/homeworks |
+| 25.12.2022  | 25.12.2023   | Проектики | Написать 100 проектиков | https://piter-education.ru:7074/homeworks |
+And Click select group button
+And Click pin  button
+And I click "Опубликовать" button
 Then I click "Домашнее задание" tab and see created homework
+And  I should see homework name
 
 #Scenario: As student add homework link
 #Given Add homework as teacher
