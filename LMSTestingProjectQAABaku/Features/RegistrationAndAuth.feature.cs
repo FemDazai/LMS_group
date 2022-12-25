@@ -116,7 +116,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
  testRunner.When("Click to  the \"Регистрация\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table18 = new TechTalk.SpecFlow.Table(new string[] {
                             "Surname",
                             "Name",
                             "Patronymic",
@@ -125,7 +125,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Repeat password",
                             "E-mail",
                             "Phone"});
-                table11.AddRow(new string[] {
+                table18.AddRow(new string[] {
                             "Перошков",
                             "Иван",
                             "Булкович",
@@ -134,8 +134,26 @@ this.ScenarioInitialize(scenarioInfo);
                             "123456789",
                             "perojoknebulkaa8@gmail.com",
                             "+71234567890"});
+                table18.AddRow(new string[] {
+                            "Surname",
+                            "Name",
+                            "Patronymic",
+                            "Birth date",
+                            "Password",
+                            "Repeat password",
+                            "E-mail",
+                            "Phone"});
+                table18.AddRow(new string[] {
+                            "Перошков",
+                            "Иван",
+                            "Булкович",
+                            "01.10.2000",
+                            "123456789",
+                            "123456789",
+                            "perojoknebulkaa26@gmail.com",
+                            "+71234567890"});
 #line 8
- testRunner.And("Fill the regist form", ((string)(null)), table11, "And ");
+ testRunner.And("Fill the regist form", ((string)(null)), table18, "And ");
 #line hidden
 #line 11
  testRunner.And("Click to checkbox button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
