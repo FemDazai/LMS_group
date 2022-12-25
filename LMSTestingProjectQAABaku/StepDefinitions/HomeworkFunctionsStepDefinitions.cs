@@ -44,7 +44,7 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         [Given(@"Auth as teacher")]
         public void GivenAuthAsTeacher()
         {
-            _authPage.EnterEmail("willywonka20@gmail.com");
+            _authPage.EnterEmail("willywonka28@gmail.com");
             _authPage.EnterPassword("123456789");
             Thread.Sleep(500);
         }
@@ -62,6 +62,12 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             _teacherMenuPage.ClickButtonAddHomework();  
         }
 
+        [When(@"Click select group button")]
+        public void WhenClickSelectGroupButton()
+        {
+            _teacherMenuPage.GetClickButtonSelectGroup();
+        }
+
         [When(@"I fill form  for send homework")]
         public void WhenIFillFormForSendHomework(Table table)
         {
@@ -73,16 +79,11 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             _teacherMenuPage.EnterFieldUsefulLinks(_table.Link);
         }
 
-        [When(@"Click select group button")]
-        public void WhenClickSelectGroupButton()
-        {
-            _teacherMenuPage.GetClickButtonSelectGroup();
-        }
-
         [When(@"Click pin  button")]
         public void WhenClickPinButton()
         {
             _teacherMenuPage.ClickButtonPinLink();
+            Thread.Sleep(500);
         }
 
         [When(@"I click ""([^""]*)"" button")]
@@ -361,7 +362,7 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         {
             AuthRequestModelApi authAsTeacher = new AuthRequestModelApi()
             {
-                Email = "willywonka17@gmail.com",
+                Email = "willywonka28@gmail.com",
                 Password = "123456789"
             };
             IdStorage.CreateInstance().teacherToken = _webClient.Auth(authAsTeacher);
