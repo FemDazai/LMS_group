@@ -13,12 +13,18 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         CreateGroupsPage _createGroupsPage;
         ManagerMenuPage _managerMenuPage;
         GroupsPage _groupsPage; 
+        EditCoursesPage _editCoursesPage;
+        MethodistMenuPage _methodistMenuPage;
+        CoursesPage _coursesPage;
 
         public CreateGroupStepDefinitions()
         {
             _authPage = new AuthPage();
             _createGroupsPage = new CreateGroupsPage();
             _managerMenuPage = new ManagerMenuPage();
+            _editCoursesPage = new EditCoursesPage();   
+            _methodistMenuPage = new MethodistMenuPage();  
+            _coursesPage = new CoursesPage();
         }
 
         [Given(@"Log in as manager")]
@@ -69,5 +75,57 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             Assert.Equal(exception, actual);
 
         }
+
+        [Given(@"Auth as methodist")]
+        public void GivenAuthAsMethodist(Table table)
+        {
+            var addTable = table.CreateInstance<AuthModel>();
+            _authPage.EnterEmail(addTable.Email);
+            _authPage.EnterPassword(addTable.Password);
+            _authPage.ClickAuthButton();
+
+        }
+
+        [When(@"Click to  the button methodist")]
+        public void WhenClickToTheButtonMethodist()
+        {
+            _methodistMenuPage.ClickButtonSelectMethodist();
+        }
+
+
+        [When(@"Click ""([^""]*)"" button")]
+        public void WhenClickButton(string p0)
+        {
+            _methodistMenuPage.ClickButtonEditCourses();    
+        }
+
+        [When(@"Creating a new topic")]
+        public void WhenCreatingANewTopic()
+        {
+            _editCoursesPage.EnterNumber("7");
+            _editCoursesPage.EnterTopicName("Двумерные массивы");
+            _editCoursesPage.EnterDuration("2");
+        }
+
+        [When(@"Click  ""([^""]*)""  button")]
+        public void WhenClickSaveButton(string сохранить)
+        {
+            _editCoursesPage.ClickSaveButton();
+        }
+
+        [Then(@"Click ""([^""]*)"" button")]
+        public void ThenClickButton(string курсы)
+        {
+            _methodistMenuPage.ClickButtonCourses();    
+        }
+
+        [Then(@"I shold to see the new topic in list")]
+        public void ThenISholdToSeeTheNewTopicInList()
+        {
+            string expected = "Двумерные массивы";
+            string actual = _coursesPage.ButtTopicsName();
+            Assert.Equal(expected, actual);
+        }
+
     }
 }

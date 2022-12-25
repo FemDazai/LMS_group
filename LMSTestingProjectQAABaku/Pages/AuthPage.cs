@@ -3,7 +3,7 @@ namespace LMSTestingProjectQAABaku.Pages
 {
     public class AuthPage : AbstractPage
     {
-        public IWebElement TextBoxEmailForAuth => _driver.FindElement(By.XPath(@"//input[@class='form-input']"));
+        public IWebElement TextBoxEmailForAuth => _driver.FindElement(By.XPath(@"//input[@placeholder='example@mail.ru']"));
         public IWebElement TextBoxPasswordForAuth => _driver.FindElement(By.XPath(@"//input[@class='form-input custom-password']"));
         public IWebElement TextBoxUserName => _driver.FindElement(By.XPath(@"//span[@class='avatar-name transition-styles']"));
         public IWebElement ButtonForAuth => _driver.FindElement(By.XPath(@"//button[@class='sc-bczRLJ iJvUkY btn btn-fill flex-container']"));
