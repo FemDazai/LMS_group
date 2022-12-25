@@ -1,4 +1,6 @@
 ﻿using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +29,16 @@ namespace LMSTestingProjectQAABaku.Pages
         public IWebElement ButtonPublish => _driver.FindElement(By.XPath(@"//button[@class='sc-bczRLJ iJvUkY btn btn-fill flex-container']"));
         public IWebElement ButtonSelectRole => _driver.FindElement(By.XPath(@"//div[@class='drop-down-filter  left']"));
         public IWebElement ButtonSelectRoleinList => _driver.FindElement(By.XPath(@"//li[text()='Преподаватель']"));
+        public IWebElement ButtonAddHomework => _driver.FindElement(By.XPath(@"//button[@class='sc-bczRLJ iJvUkY btn btn-fill flex-container']"));
+        public IWebElement ButtonPinLink => _driver.FindElement(By.XPath(@"//button[@class='sc-bczRLJ kEeNDb btn btn-fill ellipse flex-container']"));
+        public IWebElement TextBoxHomeworkName
+        {
+            get
+            {
+                WebDriverWait driverWait = new WebDriverWait(_driver, TimeSpan.FromSeconds(5));
+                return driverWait.Until(ExpectedConditions.ElementExists(By.XPath("//span[text()='Проектики'")));
+            }
+        }
 
         public void GetClickButtonUserNameMenu()
         {
@@ -95,5 +107,20 @@ namespace LMSTestingProjectQAABaku.Pages
             ButtonSelectRole.Click();
             ButtonSelectRoleinList.Click();
         }
+
+        public void ClickButtonAddHomework()
+        {
+            ButtonAddHomework.Click();
+        }
+        public void ClickButtonPinLink()
+        {
+            ButtonPinLink.Click();
+        }
+
+        public string GetHomeworkName()
+        {
+           return TextBoxHomeworkName.Text;
+        }
+
     }
 }
