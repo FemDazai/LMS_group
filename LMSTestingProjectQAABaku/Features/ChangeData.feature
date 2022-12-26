@@ -27,15 +27,16 @@ A short summary of the feature
 #	Then Show uploaded profile picture in user page
 
 Scenario: Changed password as a student
-	Given Open auth web page
-	And Fill form
+	Given Open  auth web page
+	When Fill auth form
 	| Email                    | Password  |
-	| perojoknebulka@gmail.com | 123456789 |
-	And  Open account setup page
-	When Where the password caption click on the pen icon  //Где надпись пароль нажать на значок ручка
-	And Fill form
+	| perojoknebulka@gmail.com | 987654321 |
+	And Click "Войти"  button
+	And Click on profile picture
+	And Where the password caption click on the pen icon  
+	And Fill  form
 	| Old password | New password | Repeat new password |
-	| 123456789    | 987654321    | 987654321           |
-	And Click on the save button
-	Then Get a new profile password
+	|   987654321  |  123456789   |      123456789      |
+	And Click on the "Сохранить" button
+	Then I should see the username "Иван"
 

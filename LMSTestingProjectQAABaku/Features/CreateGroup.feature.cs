@@ -122,12 +122,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 10
     testRunner.And("Go to the tab \"Создать группу\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                             "Group name"});
-                table6.AddRow(new string[] {
+                table7.AddRow(new string[] {
                             "Шумные дети - группа1"});
 #line 11
- testRunner.When("I fill in all the fields in page and choose teacher and tyutor", ((string)(null)), table6, "When ");
+ testRunner.When("I fill in all the fields in page and choose teacher and tyutor", ((string)(null)), table7, "When ");
 #line hidden
 #line 14
  testRunner.And("Click on  \"Save\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -170,14 +170,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 22
  testRunner.Given("Open auth web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "Email",
                             "Password"});
-                table7.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "yurayura@gmail.com",
                             "123456789"});
 #line 23
- testRunner.And("Auth as methodist", ((string)(null)), table7, "And ");
+ testRunner.And("Auth as methodist", ((string)(null)), table8, "And ");
 #line hidden
 #line 26
     testRunner.When("Click to the role button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

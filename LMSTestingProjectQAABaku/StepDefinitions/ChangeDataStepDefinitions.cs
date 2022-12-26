@@ -13,14 +13,12 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         AuthPage _authPage;
         SettingsPage _settingsPage;
         ChangePasswordPage _changePasswordPage;
-        public ChangeDataStepDefinitions()
+        public void ChangePhotoStepDefinitions()
         {
             _authPage = new AuthPage();
             _settingsPage = new SettingsPage();
             _changePasswordPage = new ChangePasswordPage();
-
         }
-
         [Given(@"Open  auth web page")]
         public void GivenOpenAuthWebPage()
         {
@@ -37,32 +35,6 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             //_authPage.DeletePassword();
             _authPage.EnterPassword(_table.Password);
         }
-
-        [Given(@"Open account setup page")]
-        public void GivenOpenAccountSetupPage()
-        {
-            throw new PendingStepException();
-        }
-
-        [When(@"Where the password caption click on the pen icon  //Где надпись пароль нажать на значок ручка")]
-        public void WhenWhereThePasswordCaptionClickOnThePenIconГдеНадписьПарольНажатьНаЗначокРучка()
-        {
-            throw new PendingStepException();
-        }
-
-        [When(@"Click on the save button")]
-        public void WhenClickOnTheSaveButton()
-        {
-            throw new PendingStepException();
-        }
-
-        [Then(@"Get a new profile password")]
-        public void ThenGetANewProfilePassword()
-        {
-            throw new PendingStepException();
-        }
-
-
 
         [When(@"Click ""([^""]*)""  button")]
         public void WhenClickButton(string войти)
