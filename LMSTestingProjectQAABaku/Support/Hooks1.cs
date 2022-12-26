@@ -125,19 +125,33 @@ namespace LMSTestingProjectQAABaku.Support
             dbConnection.Query($"delete from Student_Homework where StudentId = (select Id from [User] where Email = 'dazai30@gmail.com');");
             dbConnection.Query($"delete from [User] where Email = 'dazai30@gmail.com';");
 
-            dbConnection.Query($"delete from Payment where UserId = (select Id from [User] where Email = 'perojoknebulka21@gmail.com ');");
-            dbConnection.Query($"delete from Student_Lesson where UserId = (select Id from [User] where Email = 'perojoknebulka21@gmail.com ');");
-            dbConnection.Query($"delete from Group_Lesson where LessonId = (select Id from [Lesson] where TeacherId = (select Id from [User] where Email = 'perojoknebulka@gmail.com '));");
-            dbConnection.Query($"delete from Lesson_Topic where LessonId = (select Id from [Lesson] where TeacherId = (select Id from [User] where Email = 'perojoknebulka@gmail.com '));");
-            dbConnection.Query($"delete from Lesson where TeacherId = (select Id from [User] where Email = 'perojoknebulka@gmail.com ');");
-            dbConnection.Query($"delete from User_Group where UserId = (select Id from [User] where Email = 'perojoknebulka@gmail.com ');");
-            dbConnection.Query($"delete from StudentRating where UserId = (select Id from [User] where Email = 'perojoknebulka@gmail.com ');");
-            dbConnection.Query($"delete from User_Role where UserId = (select Id from [User] where Email = 'perojoknebulka@gmail.com ');");
-            dbConnection.Query($"delete from [Notification] where UserId = (select Id from [User] where Email = 'perojoknebulka@gmail.com ');");
-            dbConnection.Query($"delete from Comment where UserId = (select Id from [User] where Email = 'perojoknebulka@gmail.com ');");
-            dbConnection.Query($"delete from Comment where StudentHomeworkId = (select Id from [Student_Homework] where StudentId = (select Id from [User] where Email = 'perojoknebulka@gmail.com '));");
-            dbConnection.Query($"delete from Student_Homework where StudentId = (select Id from [User] where Email = 'perojoknebulka@gmail.com ');");
-            dbConnection.Query($"delete from [User] where Email = 'perojoknebulka@gmail.com ';");
+            dbConnection.Query($"delete from Payment where UserId = (select Id from [User] where Email = 'perojoknebulka24@gmail.com');");
+            dbConnection.Query($"delete from Student_Lesson where UserId = (select Id from [User] where Email = 'perojoknebulka24@gmail.com ');");
+            dbConnection.Query($"delete from Group_Lesson where LessonId = (select Id from [Lesson] where TeacherId = (select Id from [User] where Email = 'perojoknebulka24@gmail.com'));");
+            dbConnection.Query($"delete from Lesson_Topic where LessonId = (select Id from [Lesson] where TeacherId = (select Id from [User] where Email = 'perojoknebulka24@gmail.com'));");
+            dbConnection.Query($"delete from Lesson where TeacherId = (select Id from [User] where Email = 'perojoknebulka24@gmail.com');");
+            dbConnection.Query($"delete from User_Group where UserId = (select Id from [User] where Email = 'perojoknebulka24@gmail.com');");
+            dbConnection.Query($"delete from StudentRating where UserId = (select Id from [User] where Email = 'perojoknebulka24@gmail.com');");
+            dbConnection.Query($"delete from User_Role where UserId = (select Id from [User] where Email = 'perojoknebulka24@gmail.com');");
+            dbConnection.Query($"delete from [Notification] where UserId = (select Id from [User] where Email = 'perojoknebulka24@gmail.com');");
+            dbConnection.Query($"delete from Comment where UserId = (select Id from [User] where Email = 'perojoknebulka24@gmail.com');");
+            dbConnection.Query($"delete from Comment where StudentHomeworkId = (select Id from [Student_Homework] where StudentId = (select Id from [User] where Email = 'perojoknebulka24@gmail.com'));");
+            dbConnection.Query($"delete from Student_Homework where StudentId = (select Id from [User] where Email = 'perojoknebulka24@gmail.com');");
+            dbConnection.Query($"delete from [User] where Email = 'perojoknebulka24@gmail.com';");
+
+            dbConnection.Query($"delete from Payment where UserId = (select Id from [User] where Email = 'grigoriyRasputin@gmail.com');");
+            dbConnection.Query($"delete from Student_Lesson where UserId = (select Id from [User] where Email = 'grigoriyRasputin@gmail.com');");
+            dbConnection.Query($"delete from Group_Lesson where LessonId = (select Id from [Lesson] where TeacherId = (select Id from [User] where Email = 'grigoriyRasputin@gmail.com'));");
+            dbConnection.Query($"delete from Lesson_Topic where LessonId = (select Id from [Lesson] where TeacherId = (select Id from [User] where Email = 'grigoriyRasputin@gmail.com'));");
+            dbConnection.Query($"delete from Lesson where TeacherId = (select Id from [User] where Email = 'grigoriyRasputin@gmail.com');");
+            dbConnection.Query($"delete from User_Group where UserId = (select Id from [User] where Email = 'grigoriyRasputin@gmail.com');");
+            dbConnection.Query($"delete from StudentRating where UserId = (select Id from [User] where Email = 'grigoriyRasputin@gmail.com');");
+            dbConnection.Query($"delete from User_Role where UserId = (select Id from [User] where Email = 'grigoriyRasputin@gmail.com');");
+            dbConnection.Query($"delete from [Notification] where UserId = (select Id from [User] where Email = 'grigoriyRasputin@gmail.com');");
+            dbConnection.Query($"delete from Comment where UserId = (select Id from [User] where Email = 'grigoriyRasputin@gmail.com');");
+            dbConnection.Query($"delete from Comment where StudentHomeworkId = (select Id from [Student_Homework] where StudentId = (select Id from [User] where Email = 'grigoriyRasputin@gmail.com'));");
+            dbConnection.Query($"delete from Student_Homework where StudentId = (select Id from [User] where Email = 'grigoriyRasputin@gmail.com');");
+            dbConnection.Query($"delete from [User] where Email = 'grigoriyRasputin@gmail.com';");
             dbConnection.Close();
         }
     }

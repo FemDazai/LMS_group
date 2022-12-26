@@ -327,9 +327,8 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         //    Assert.AreNotEqual(expected, actual);
         //}
         [Then(@"I should see the status of the completed task as ""([^""]*)""")]
-        public void ThenIShouldSeeTheStatusOfTheCompletedTaskAs(string проверить)
+        public void ThenIShouldSeeTheStatusOfTheCompletedTaskAs(string expected)
         {
-            string expected = "Проверить";
             string actual = _studentPage.GetHomeworkStatus();
             Assert.Equal(expected, actual);
         }

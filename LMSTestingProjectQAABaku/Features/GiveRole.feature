@@ -3,8 +3,12 @@
 A short summary of the feature
 
 @tag1
-Scenario: As manager set role from teacher
- Given Request  as student
+Scenario: As admin set role from teacher
+Given Registration as student1 api
+And Auth as admin api
+	| Email              | Password     |
+	| marina@example.com | marina123456 |
+And Give student2 teacher role as admin
  And Open auth web page 
  When Auth  as teacher
  And Click button "Войти"

@@ -19,7 +19,7 @@ namespace LMSTestingProjectQAABaku.Pages
             get
             {
                 WebDriverWait driverWait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
-                return driverWait.Until(ExpectedConditions.ElementExists(By.XPath(@"//span[@class='task-status']")));
+                return driverWait.Until(ExpectedConditions.ElementExists(By.XPath(@"/html/body/div/div/main/div[1]/div[2]/span[2]")));
             }
         }
 

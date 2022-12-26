@@ -10,10 +10,29 @@ namespace LMSTestingProjectQAABaku
 {
     public class DataMock
     {
-        public static RequestModelApi requestStudentModel1
+        public static RequestModelApi requestStudentModelWeb
         { 
             get 
             { 
+                return new RequestModelApi()
+                {
+                    firstName = "Григорий",
+                    lastName = "Распутин",
+                    patronymic = "Ефимович",
+                    email = "grigoriyRasputin@gmail.com",
+                    username = "Grigoriy",
+                    password = "123456789",
+                    city = "SaintPetersburg",
+                    birthDate = "15.12.1999",
+                    gitHubAccount = "github.com/Grigoriy",
+                    phoneNumber = "+72222222220"
+                };
+            } 
+        }
+        public static RequestModelApi requestStudentModel1
+        {
+            get
+            {
                 return new RequestModelApi()
                 {
                     firstName = "Родион",
@@ -27,7 +46,7 @@ namespace LMSTestingProjectQAABaku
                     gitHubAccount = "github.com/Rodionchik",
                     phoneNumber = "+72222222221"
                 };
-            } 
+            }
         }
         public static RequestModelApi requestStudentModel2
         {

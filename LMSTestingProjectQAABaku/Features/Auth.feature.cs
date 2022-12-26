@@ -132,7 +132,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "01.10.2000",
                             "123456789",
                             "123456789",
-                            "perojoknebulka21@gmail.com",
+                            "perojoknebulka24@gmail.com",
                             "+71234567890"});
 #line 9
  testRunner.And("Fill the regist form", ((string)(null)), table1, "And ");
@@ -147,7 +147,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Email",
                             "Password"});
                 table2.AddRow(new string[] {
-                            "perojoknebulka21@gmail.com",
+                            "perojoknebulka24@gmail.com",
                             "123456789"});
 #line 14
  testRunner.When("Fill form", ((string)(null)), table2, "When ");

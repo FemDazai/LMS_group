@@ -46,6 +46,12 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             Thread.Sleep(1000);
         }
 
+        [When(@"Click to  the button admin")]
+        public void WhenClickToTheButtonAdmin()
+        {
+            _managerMenuPage.GetClickButtonSelectAdmin();
+        }
+
         [When(@"I fill in all the fields in page and choose teacher and tyutor")]
         public void WhenIFillInAllTheFieldsInPageAndChooseTeacherAndTyutor(Table table)
         {
