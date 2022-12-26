@@ -10,9 +10,9 @@ namespace LMSTestingProjectQAABaku.Pages
     {
         public IWebElement TextBoxGroupName => _driver.FindElement(By.XPath(@"//input[@placeholder = 'Введите название']"));
         public IWebElement CheckboxForChooseCourses => _driver.FindElement(By.XPath(@"//div[@class='drop-down-filter  ']"));
-        public IWebElement ButtonForChooseCourse => _driver.FindElement(By.XPath(@"//li[text()='Базовый C#']"));
-        public IWebElement CheckboxForChooseTeacher => _driver.FindElement(By.XPath(@"//span[text()='Пуля Макаронка']"));
-        public IWebElement CheckboxForChooseTutor => _driver.FindElement(By.XPath(@"//span[text()='Юра Ликов']"));
+        public IWebElement ButtonForChooseCourse => _driver.FindElement(By.XPath(@"//li[text()='FrontedCourse']"));
+        public IWebElement CheckboxForChooseTeacher => _driver.FindElement(By.XPath(@"//span[text()='Вилли Вонка']"));
+        public IWebElement CheckboxForChooseTutor => _driver.FindElement(By.XPath(@"//span[text()='Чуя Накахара']"));
         public IWebElement ButtonForSave => _driver.FindElement(By.XPath(@"//button[@class = 'sc-bczRLJ iJvUkY btn btn-fill flex-container']"));
         public IWebElement TitleGroup => _driver.FindElement(By.XPath(@"//div[text()='Шумные дети - группа1']"));
 

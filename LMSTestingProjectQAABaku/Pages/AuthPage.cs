@@ -17,8 +17,8 @@ namespace LMSTestingProjectQAABaku.Pages
             }
         }
         public IWebElement ButtonForAuth => _driver.FindElement(By.XPath(@"//button[@class='sc-bczRLJ iJvUkY btn btn-fill flex-container']"));
-        public IWebElement PictureButton => _driver.FindElement(By.XPath(@"/html/body/div/div/aside/div/div[1]/div[2]"));
-        public IWebElement NotificationWrongPasswordInput => _driver.FindElement(By.XPath(@"//div[text()=""Введите пароль""]"));
+        public IWebElement AvatarButtonName => _driver.FindElement(By.XPath(@"//div[@class='user-info-wrapper']']"));
+        public IWebElement NotificationWrongPasswordInput => _driver.FindElement(By.XPath(@"//div[text()='Введите пароль']"));
         public IWebElement NotificationWrongEmail => _driver.FindElement(By.XPath(@"//div[text()='Неправильные логин или пароль']"));
 
 
@@ -48,9 +48,9 @@ namespace LMSTestingProjectQAABaku.Pages
             return TextBoxUserName.Text;
         }
 
-        public void ClickOnPicture()
+        public void ClickOnAvatarName()
         {
-            PictureButton.Click();
+            AvatarButtonName.Click();
         }
 
         public string GetNotificationWrongPassword()

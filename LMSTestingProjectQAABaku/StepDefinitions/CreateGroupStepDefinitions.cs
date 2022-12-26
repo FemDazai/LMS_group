@@ -55,8 +55,6 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             var createTable = table.CreateInstance<CreateGroupsModel>();
 
             _createGroupsPage.EnterGroupName(createTable.GroupName);
-            _createGroupsPage.ChooseCourses();
-            _createGroupsPage.ChooseConcretCourses();
             _createGroupsPage.ChooseTeacher();
             _createGroupsPage.ChooseTutor();
         }
@@ -65,6 +63,11 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         public void WhenClickOnButton(string save)
         {
            _createGroupsPage.SaveButton();//не нажимает на кнопку бяка фу
+        }
+
+        [When(@"Click on ""([^""]*)""")]
+        public void WhenClickOn(string группы)
+        {
             _managerMenuPage.ClickGroupButton();
         }
 
@@ -85,8 +88,6 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             var addTable = table.CreateInstance<AuthModel>();
             _authPage.EnterEmail(addTable.Email);
             _authPage.EnterPassword(addTable.Password);
-            _authPage.ClickAuthButton();
-
         }
 
         [When(@"Click to  the button methodist")]

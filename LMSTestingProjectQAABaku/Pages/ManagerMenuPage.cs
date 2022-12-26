@@ -47,10 +47,6 @@ namespace LMSTestingProjectQAABaku.Pages
             ButtonSelectCourse.Click();
         }
 
-        public void GetClickButtonSelectCourseFrontend()
-        {
-            ButtonSelectCourseFrontend.Click();
-        }
         public void ClickCreateGroupButton()
         {
             Actions action = new Actions(_driver);

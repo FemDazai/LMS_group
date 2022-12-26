@@ -4,7 +4,14 @@ A short summary of the feature
 
 @tag1
 Scenario: Admin create new group
-	And Create courses by admin
+Given Registration as student1 api
+And Auth as admin api
+	| Email              | Password     |
+	| marina@example.com | marina123456 |
+And Give student2 teacher role as admin
+And Give student3 tutor role as admin
+And Give student4 methodist role as admin
+And Create courses by admin
 	And Open auth web page
 	And Log in as manager
 	When Click sign in  button
@@ -15,6 +22,7 @@ Scenario: Admin create new group
 	| Group name            |
 	| Шумные дети - группа1 |
 	And Click on  "Save" button
+	And Click on "Группы"
 	Then The created group will appear in the list of groups
 	 
 

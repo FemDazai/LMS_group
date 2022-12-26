@@ -65,7 +65,6 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         [Then(@"I shold to see  the notification ""([^""]*)""")]
         public void ThenISholdToSeeTheNotification(string expected)
         {
-            
             string actual = _authPage.GetNotificationWrongPassword();
             Assert.Equal(expected, actual);
         }
