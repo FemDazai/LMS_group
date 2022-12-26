@@ -54,16 +54,26 @@ And Give student4 methodist role as admin
 And Create courses by admin
 And Create group by admin
 And Add users in group as admin
-#And Auth as teacher api
-#And Create task by teacher
-#And Create homework by teacher
-#Given Open auth web page
+And Open auth web page
+And Auth as teacher
+When Click sign in  button
+And Click to the role button
+And Click to  the button teacher
+Given I click "Домашнее задание" tab
+And I click "Добавить задание" button 
+When Click select group button
+When I fill form  for send homework
+| DateOfIssue | DeliveryDate | Name      | Description             | Link									   |
+| 26.12.2022  | 25.12.2023   | Проектики | Написать 100 проектиков | https://piter-education.ru:7074/homeworks |
+And Click pin  button
+And I click "Опубликовать" button
+And Click to button "Выйти"
 And Log in as student
-And I click "Домашнее задание" 
+And Click sign in  button
+Given I click "Домашние задания" tab
 And Click in button "к заданию"
-When I fill in all the fields in page
+When I fill link field in page
 	| LinkGitHub                                |
 	| https://github.com/El-ItsMe/Project-Test-1|
 And Click on send button
-And Click to link "Выполненное задание" 
 And I should see the status of the completed task as "Проверить"

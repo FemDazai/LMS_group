@@ -1,11 +1,6 @@
 ﻿using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LMSTestingProjectQAABaku.Pages
 {
@@ -18,7 +13,15 @@ namespace LMSTestingProjectQAABaku.Pages
         public IWebElement ButtonSelectTeacher => _driver.FindElement(By.XPath(@"//li[text()='Преподаватель'][1]"));
         public IWebElement ButtonAvatarName => _driver.FindElement(By.XPath(@"//span[@class='avatar-name transition-styles']"));
         public IWebElement ButtonAvatarRole => _driver.FindElement(By.XPath(@"//div[@class='drop-down-filter  left']"));
-        public IWebElement ButtonHomework => _driver.FindElement(By.XPath(@"//span[text()='Домашние задания']"));
+        //public IWebElement ButtonHomework => _driver.FindElement(By.XPath(@"//span[text()='Домашние задания']"));
+        public IWebElement ButtonHomework
+        {
+            get 
+            {
+                WebDriverWait driverWait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
+                return driverWait.Until(ExpectedConditions.ElementExists(By.XPath("//span[text()='Домашние задания']")));
+            }
+        }
         public IWebElement ButtonAddTask => _driver.FindElement(By.XPath(@"//button[@class='sc-bczRLJ iJvUkY btn btn-fill flex-container']"));
         public IWebElement ButtonSelectGroup => _driver.FindElement(By.XPath(@"//span[@class='radio-text']"));
         public IWebElement FieldEnterTitle => _driver.FindElement(By.XPath(@"//input[@placeholder='Введите название']"));
