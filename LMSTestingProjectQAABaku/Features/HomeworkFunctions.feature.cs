@@ -111,14 +111,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 testRunner.Given("Registration as student1 api", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
                             "Email",
                             "Password"});
-                table10.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "marina@example.com",
                             "marina123456"});
 #line 7
-testRunner.And("Auth as admin api", ((string)(null)), table10, "And ");
+testRunner.And("Auth as admin api", ((string)(null)), table11, "And ");
 #line hidden
 #line 10
 testRunner.And("Give student2 teacher role as admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -162,20 +162,20 @@ testRunner.And("I click \"Добавить задание\" button", ((string)(n
 #line 23
 testRunner.When("Click select group button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
                             "DateOfIssue",
                             "DeliveryDate",
                             "Name",
                             "Description",
                             "Link"});
-                table11.AddRow(new string[] {
+                table12.AddRow(new string[] {
                             "26.12.2022",
                             "25.12.2023",
                             "Проектики",
                             "Написать 100 проектиков",
                             "https://piter-education.ru:7074/homeworks"});
 #line 24
-testRunner.When("I fill form  for send homework", ((string)(null)), table11, "When ");
+testRunner.When("I fill form  for send homework", ((string)(null)), table12, "When ");
 #line hidden
 #line 27
 testRunner.And("Click pin  button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -224,14 +224,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 47
 testRunner.Given("Registration as student1 api", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
                             "Email",
                             "Password"});
-                table12.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "marina@example.com",
                             "marina123456"});
 #line 48
-testRunner.And("Auth as admin api", ((string)(null)), table12, "And ");
+testRunner.And("Auth as admin api", ((string)(null)), table13, "And ");
 #line hidden
 #line 51
 testRunner.And("Give student2 teacher role as admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -275,20 +275,20 @@ testRunner.And("I click \"Добавить задание\" button", ((string)(n
 #line 64
 testRunner.When("Click select group button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
                             "DateOfIssue",
                             "DeliveryDate",
                             "Name",
                             "Description",
                             "Link"});
-                table13.AddRow(new string[] {
+                table14.AddRow(new string[] {
                             "26.12.2022",
                             "25.12.2023",
                             "Проектики",
                             "Написать 100 проектиков",
                             "https://piter-education.ru:7074/homeworks"});
 #line 65
-testRunner.When("I fill form  for send homework", ((string)(null)), table13, "When ");
+testRunner.When("I fill form  for send homework", ((string)(null)), table14, "When ");
 #line hidden
 #line 68
 testRunner.And("Click pin  button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -311,12 +311,12 @@ testRunner.Given("I click \"Домашние задания\" tab", ((string)(nu
 #line 74
 testRunner.And("Click in button \"к заданию\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
                             "LinkGitHub"});
-                table14.AddRow(new string[] {
+                table15.AddRow(new string[] {
                             "https://github.com/El-ItsMe/Project-Test-1"});
 #line 75
-testRunner.When("I fill link field in page", ((string)(null)), table14, "When ");
+testRunner.When("I fill link field in page", ((string)(null)), table15, "When ");
 #line hidden
 #line 78
 testRunner.And("Click on send button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

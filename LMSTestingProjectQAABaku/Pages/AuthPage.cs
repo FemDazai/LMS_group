@@ -1,11 +1,21 @@
 ﻿
+using OpenQA.Selenium.Support.UI;
+
+
 namespace LMSTestingProjectQAABaku.Pages
 {
     public class AuthPage : AbstractPage
     {
         public IWebElement TextBoxEmailForAuth => _driver.FindElement(By.XPath(@"//input[@placeholder='example@mail.ru']"));
         public IWebElement TextBoxPasswordForAuth => _driver.FindElement(By.XPath(@"//input[@class='form-input custom-password']"));
-        public IWebElement TextBoxUserName => _driver.FindElement(By.XPath(@"//span[@class='avatar-name transition-styles']"));
+        public IWebElement TextBoxUserName
+        {
+            get
+            {
+                WebDriverWait driverWait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
+                return driverWait.Until(ExpectedConditions.ElementExists(By.XPath(@"//span[text()='Иван']")));
+            }
+        }
         public IWebElement ButtonForAuth => _driver.FindElement(By.XPath(@"//button[@class='sc-bczRLJ iJvUkY btn btn-fill flex-container']"));
         public IWebElement PictureButton => _driver.FindElement(By.XPath(@"/html/body/div/div/aside/div/div[1]/div[2]"));
         public IWebElement NotificationWrongPasswordInput => _driver.FindElement(By.XPath(@"//div[text()=""Введите пароль""]"));
@@ -31,7 +41,6 @@ namespace LMSTestingProjectQAABaku.Pages
         public void ClickAuthButton()
         {
             ButtonForAuth.Click();
-            Thread.Sleep(1000);
         }
 
         public string GetButtonByName()

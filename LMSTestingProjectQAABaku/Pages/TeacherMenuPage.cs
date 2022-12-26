@@ -9,11 +9,17 @@ namespace LMSTestingProjectQAABaku.Pages
         public override void Open()
         {
         }
-        public IWebElement ButtonUserNameMenu => _driver.FindElement(By.XPath(@"//div[@class='drop-down-filter__wrapper']"));
+        public IWebElement ButtonUserNameMenu
+        {
+            get 
+            {
+                WebDriverWait driverWait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
+                return driverWait.Until(ExpectedConditions.ElementExists(By.XPath("//div[@class='drop-down-filter__wrapper']")));
+            }
+        }
         public IWebElement ButtonSelectTeacher => _driver.FindElement(By.XPath(@"//li[text()='Преподаватель'][1]"));
         public IWebElement ButtonAvatarName => _driver.FindElement(By.XPath(@"//span[@class='avatar-name transition-styles']"));
         public IWebElement ButtonAvatarRole => _driver.FindElement(By.XPath(@"//div[@class='drop-down-filter  left']"));
-        //public IWebElement ButtonHomework => _driver.FindElement(By.XPath(@"//span[text()='Домашние задания']"));
         public IWebElement ButtonHomework
         {
             get 

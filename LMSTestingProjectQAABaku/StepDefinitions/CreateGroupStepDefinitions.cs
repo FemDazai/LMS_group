@@ -34,8 +34,6 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             _authPage.EnterEmail("marina@example.com");
             _authPage.EnterPassword("marina123456");
             _authPage.ClickAuthButton();
-
-            Thread.Sleep(500);
         }
 
         [Given(@"Go to the tab ""([^""]*)""")]
@@ -43,7 +41,6 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         public void GivenGoToTheTab(string p0)
         {
             _managerMenuPage.ClickCreateGroupButton();
-            Thread.Sleep(1000);
         }
 
         [When(@"Click to  the button admin")]
