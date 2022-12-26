@@ -14,7 +14,6 @@ namespace LMSTestingProjectQAABaku.Pages
         public IWebElement ButtonExit => _driver.FindElement(By.XPath(@"//button[@class='exit flex-center']"));
         public IWebElement ButtonSelectAdmin => _driver.FindElement(By.XPath(@"//li[text()='Администратор'][1]"));
         public IWebElement ButtonSelectCourse => _driver.FindElement(By.XPath(@"//div[@class='drop-down-filter  ']"));
-        public IWebElement ButtonSelectCourseFrontend => _driver.FindElement(By.XPath(@"//div[text()='FrontedCourse']"));
 
         public override void Open()
         {
@@ -30,10 +29,6 @@ namespace LMSTestingProjectQAABaku.Pages
             ButtonSelectCourse.Click();
         }
 
-        public void GetClickButtonSelectCourseFrontend()
-        {
-            ButtonSelectCourseFrontend.Click();
-        }
         public void ClickCreateGroupButton()
         {
             Actions action = new Actions(_driver);

@@ -113,14 +113,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
 testRunner.Given("Registration as student1 api", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
                             "Email",
                             "Password"});
-                table9.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "marina@example.com",
                             "marina123456"});
 #line 8
-testRunner.And("Auth as admin api", ((string)(null)), table9, "And ");
+testRunner.And("Auth as admin api", ((string)(null)), table11, "And ");
 #line hidden
 #line 11
 testRunner.And("Give student2 teacher role as admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

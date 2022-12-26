@@ -109,41 +109,71 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 30
- testRunner.Given("Open  auth web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+  testRunner.Given("Open auth web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 31
+ testRunner.When("Click to  the \"Регистрация\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Email",
-                            "Password"});
+                            "Surname",
+                            "Name",
+                            "Patronymic",
+                            "Birth date",
+                            "Password",
+                            "Repeat password",
+                            "E-mail",
+                            "Phone"});
                 table5.AddRow(new string[] {
-                            "perojoknebulka@gmail.com",
-                            "987654321"});
-#line 31
- testRunner.When("Fill auth form", ((string)(null)), table5, "When ");
-#line hidden
-#line 34
- testRunner.And("Click \"Войти\"  button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+                            "Перошков",
+                            "Иван",
+                            "Булкович",
+                            "01.10.2000",
+                            "123456789",
+                            "123456789",
+                            "perojoknebulka24@gmail.com",
+                            "+71234567890"});
+#line 32
+ testRunner.And("Fill the regist form", ((string)(null)), table5, "And ");
 #line hidden
 #line 35
- testRunner.And("Click on profile picture", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Click to checkbox button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 36
- testRunner.And("Where the password caption click on the pen icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Click the \"Зарегистрироваться\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Email",
+                            "Password"});
+                table6.AddRow(new string[] {
+                            "perojoknebulka24@gmail.com",
+                            "123456789"});
+#line 37
+ testRunner.When("Fill form", ((string)(null)), table6, "When ");
+#line hidden
+#line 40
+ testRunner.And("Click sign in  button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 41
+ testRunner.And("Click on profile picture", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 42
+ testRunner.And("Where the password caption click on the pen icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                             "Old password",
                             "New password",
                             "Repeat new password"});
-                table6.AddRow(new string[] {
+                table7.AddRow(new string[] {
                             "987654321",
                             "123456789",
                             "123456789"});
-#line 37
- testRunner.And("Fill  form", ((string)(null)), table6, "And ");
+#line 43
+ testRunner.And("Fill  form", ((string)(null)), table7, "And ");
 #line hidden
-#line 40
+#line 46
  testRunner.And("Click on the \"Сохранить\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 41
+#line 47
  testRunner.Then("I should see the username \"Иван\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

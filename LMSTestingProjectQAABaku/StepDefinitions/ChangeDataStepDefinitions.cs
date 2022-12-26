@@ -45,7 +45,7 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         [When(@"Click on profile picture")]
         public void WhenClickOnProfilePicture()
         {
-            _authPage.ClickOnPicture();
+            _authPage.ClickOnAvatarName();
         }
 
         [When(@"Where the password caption click on the pen icon")]
