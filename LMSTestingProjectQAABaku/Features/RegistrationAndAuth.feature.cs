@@ -116,7 +116,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
  testRunner.When("Click to  the \"Регистрация\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
                             "Surname",
                             "Name",
                             "Patronymic",
@@ -125,7 +125,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Repeat password",
                             "E-mail",
                             "Phone"});
-                table12.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "Перошков",
                             "Иван",
                             "Булкович",
@@ -135,7 +135,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "perojoknebulkaa26@gmail.com",
                             "+71234567890"});
 #line 8
- testRunner.And("Fill the regist form", ((string)(null)), table12, "And ");
+ testRunner.And("Fill the regist form", ((string)(null)), table13, "And ");
 #line hidden
 #line 11
  testRunner.And("Click to checkbox button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

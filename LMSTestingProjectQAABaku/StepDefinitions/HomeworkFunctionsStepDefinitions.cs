@@ -44,7 +44,7 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         [Given(@"Auth as teacher")]
         public void GivenAuthAsTeacher()
         {
-            _authPage.EnterEmail("willywonka28@gmail.com");
+            _authPage.EnterEmail("willywonka30@gmail.com");
             _authPage.EnterPassword("123456789");
             Thread.Sleep(500);
         }
@@ -106,13 +106,22 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             Assert.Equal(expected, actual);
         }
 
+        [When(@"Click to button ""([^""]*)""")]
+        public void WhenClickToButton(string выйти)
+        {
+            _managerMenuPage.ClickButtonExit();
+            Thread.Sleep(1000);
+        }
 
-        //[When(@"Click to button ""([^""]*)""")]
-        //public void WhenClickToButton(string выйти)
-        //{
-        //    _managerMenuPage.ClickButtonExit();
-        //    Thread.Sleep(1000);
-        //}
+        [When(@"Log in as student")]
+        public void WhenLogInAsStudent()
+        {
+            _authPage.EnterEmail("rodionraskol30@gmail.com");
+            _authPage.EnterPassword("123456789");
+        }
+
+
+
 
         //[When(@"Auth as teacher")]
         //public void WhenAuthAsTeacher()
@@ -147,125 +156,6 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         //public void ThenIClickTabAndSeeCreatedHomework(string p0)
         //{
         //    _teacherMenuPage.GetClickButtonHomework();
-        //}
-
-
-
-
-
-
-
-        //[Given(@"Add homework as teacher")]
-        //public void GivenAddHomeworkAsTeacher()
-        //{
-        //    WebClient wClient = new WebClient();
-        //    RequestModelApi requestStudentModel = DataMock.requestStudentModelRodion;
-        //    IdStorage.CreateInstance().studentId = wClient.GetId(requestStudentModel);
-
-        //    RequestModelApi requestTeacherModelApi = DataMock.requestTeacherApiModelWilly;
-        //    int Teacherid = wClient.GetId(requestTeacherModelApi);
-        //    RequestModelApi requestTutorModelApi = DataMock.requestTutorModelChuya;
-        //    int Tyutorid = wClient.GetId(requestTutorModelApi);
-        //    RequestModelApi requestMethodistModelApi = DataMock.requestMethodistModelDazai;
-        //    int MethodistId = wClient.GetId(requestMethodistModelApi);
-
-        //    AuthRequestModelApi authRequestModel = new AuthRequestModelApi()
-        //    {
-        //        Email = "marina@example.com",
-        //        Password = "marina123456"
-        //    };
-        //    string actualToken = wClient.Auth(authRequestModel);
-        //    wClient.SetRole(actualToken, Teacherid, "Teacher");
-        //    wClient.SetRole(actualToken, Tyutorid, "Tyutor");
-        //    wClient.SetRole(actualToken, MethodistId, "Methodist");
-
-        //    CreateGroupeModelApi createGroupeModelApi = new CreateGroupeModelApi()
-        //    {
-        //        name = "string",
-        //        courseId = 1370,
-        //        groupStatusId = "Forming",
-        //        startDate = "22.12.2022",
-        //        endDate = "30.12.2022",
-        //        timetable = "stringstring",
-        //        paymentPerMonth = 10000,
-        //        paymentsCount = 5
-        //    };
-        //    int idGroup = wClient.GetIdCreatedGroup(actualToken, createGroupeModelApi);
-
-        //    AuthRequestModelApi teacherRequestModel = new AuthRequestModelApi()
-        //    {
-        //        Email = "willywonka@gmail.com",
-        //        Password = "123456789"
-        //    };
-        //    TaskRequestModelApi taskRequestModelApi = new TaskRequestModelApi()
-        //    {
-        //        name = "Команда Б",
-        //        description = "string",
-        //        links = "string",
-        //        isRequired = true,
-        //        groupId = idGroup
-        //    };
-        //    string actualTokenTeacher = wClient.Auth(teacherRequestModel);
-        //    int idTask = wClient.GetIdTask(actualTokenTeacher, taskRequestModelApi);
-        //    int idHomework = wClient.GetCreateHomework(actualTokenTeacher, idGroup, idTask);
-
-        //    wClient.AddUsers(actualToken, idGroup, Studentid, 6);
-        //    wClient.AddUsers(actualToken, idGroup, Teacherid, 4);
-        //    wClient.AddUsers(actualToken, idGroup, MethodistId, 3);
-        //    wClient.AddUsers(actualToken, idGroup, Tyutorid, 5);
-        //}
-        //[Given(@"Registration as student")]
-        //public void GivenRegistrationAsStudent(Table table)
-        //{
-
-        //}
-
-        //[Given(@"Auth as admin api")]
-        //public void GivenAuthAsAdminApi(Table table)
-        //{
-        //    throw new PendingStepException();
-        //}
-
-        //[Given(@"Give teacher role as admin")]
-        //public void GivenGiveTeacherRoleAsAdmin()
-        //{
-        //    throw new PendingStepException();
-        //}
-
-        //[Given(@"Give tutor role as admin")]
-        //public void GivenGiveTutorRoleAsAdmin()
-        //{
-        //    throw new PendingStepException();
-        //}
-
-        //[Given(@"Create group as admin")]
-        //public void GivenCreateGroupAsAdmin()
-        //{
-        //    throw new PendingStepException();
-        //}
-
-        //[Given(@"Add users in group as admin")]
-        //public void GivenAddUsersInGroupAsAdmin()
-        //{
-        //    throw new PendingStepException();
-        //}
-
-        //[Given(@"Auth as teacher api")]
-        //public void GivenAuthAsTeacherApi()
-        //{
-        //    throw new PendingStepException();
-        //}
-
-        //[Given(@"Create task")]
-        //public void GivenCreateTask()
-        //{
-        //    throw new PendingStepException();
-        //}
-
-        //[Given(@"Create homework")]
-        //public void GivenCreateHomework()
-        //{
-        //    throw new PendingStepException();
         //}
 
         [Given(@"Registration as student(.*) api")]
@@ -390,11 +280,10 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             throw new PendingStepException();
         }
 
-
         [Given(@"Log in as student")]
         public void GivenLogInAsStudent()
         {
-            _authPage.EnterEmail("rodionraskol5@gmail.com");
+            _authPage.EnterEmail("rodionraskol30@gmail.com");
             _authPage.EnterPassword("123456789");
             _authPage.ClickAuthButton();
         }
@@ -408,13 +297,13 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         public void GivenClickInButton(string p0)
         {
             _studentPage.ClickButtonGoToHomeworkPage();
+            Thread.Sleep(500);
         }
 
-        [When(@"I fill in all the fields in page")]
-        public void WhenIFillInAllTheFieldsInPage(Table table)
+        [When(@"I fill link field in page")]
+        public void WhenIFillLinkFieldInPage(Table table)
         {
-            var _table = table.CreateInstance<HomeworkGithubField>();
-            _studentPage.FillFieldEnterHomeworkLink(_table.LinkGitHub);
+            _studentPage.FillFieldEnterHomeworkLink("https://github.com/El-ItsMe/Project-Test-1");
         }
 
         [When(@"Click on send button")]
@@ -423,13 +312,13 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             _studentPage.ClickButtonHomeworkLinkSend();
         }
 
-        [When(@"Click to link ""([^""]*)""")]
-        public void WhenClickToLink(string p0)
-        {
-            _studentPage.ClickLinkReadyHomework();
-        }
+        //[When(@"Click to link ""([^""]*)""")]
+        //public void WhenClickToLink(string p0)
+        //{
+        //    _studentPage.ClickLinkReadyHomework();
+        //}
 
-        [Then(@"I have to go to another page")]
+        //[Then(@"I have to go to another page")]
         //public void ThenIHaveToGoToAnotherPage()
         //{
         //    DriverStorage storage = DriverStorage.GetInstance();
@@ -440,7 +329,9 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         [Then(@"I should see the status of the completed task as ""([^""]*)""")]
         public void ThenIShouldSeeTheStatusOfTheCompletedTaskAs(string проверить)
         {
-            throw new PendingStepException();
+            string expected = "Проверить";
+            string actual = _studentPage.GetHomeworkStatus();
+            Assert.Equal(expected, actual);
         }
 
     }
