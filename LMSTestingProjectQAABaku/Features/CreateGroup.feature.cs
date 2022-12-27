@@ -180,8 +180,8 @@ testRunner.And("Create courses by admin", ((string)(null)), ((TechTalk.SpecFlow.
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create topics like a Methodist", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 28
-this.ScenarioInitialize(scenarioInfo);
+#line 29
+ this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -200,40 +200,61 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 32
- testRunner.Given("Open auth web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 30
+testRunner.Given("Registration as student1 api", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                             "Email",
                             "Password"});
                 table10.AddRow(new string[] {
-                            "yurayura@gmail.com",
-                            "123456789"});
-#line 33
- testRunner.And("Auth as methodist", ((string)(null)), table10, "And ");
+                            "marina@example.com",
+                            "marina123456"});
+#line 31
+testRunner.And("Auth as admin api", ((string)(null)), table10, "And ");
+#line hidden
+#line 34
+testRunner.And("Give student2 teacher role as admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 35
+testRunner.And("Give student3 tutor role as admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 36
- testRunner.When("Click sign in  button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("Give student4 methodist role as admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 37
-    testRunner.And("Click to the role button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("Open auth web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
+                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Email",
+                            "Password"});
+                table11.AddRow(new string[] {
+                            "dazai30@gmail.com",
+                            "123456789"});
 #line 38
-    testRunner.And("Click to  the button methodist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 39
- testRunner.And("Click \"Редактировать курсы\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 40
- testRunner.And("Creating a new topic", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Auth as methodist", ((string)(null)), table11, "And ");
 #line hidden
 #line 41
- testRunner.And("Click  \"Сохранить\"  button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("Click sign in  button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 42
- testRunner.Then("Click \"Курсы\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.And("Click to the role button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 43
+    testRunner.And("Click to  the button methodist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 44
+ testRunner.And("Click \"Редактировать курсы\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 45
+ testRunner.And("Creating a new topic", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 46
+ testRunner.And("Click  \"Сохранить\"  button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 47
+ testRunner.Then("Click \"Курсы\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 48
  testRunner.And("I shold to see the new topic in list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }

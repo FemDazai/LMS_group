@@ -40,14 +40,14 @@ namespace LMSTestingProjectQAABaku.Pages
         public IWebElement ButtonSelectRoleinList => _driver.FindElement(By.XPath(@"//li[text()='Преподаватель']"));
         public IWebElement ButtonAddHomework => _driver.FindElement(By.XPath(@"//button[@class='sc-bczRLJ iJvUkY btn btn-fill flex-container']"));
         public IWebElement ButtonPinLink => _driver.FindElement(By.XPath(@"//button[@class='sc-bczRLJ kEeNDb btn btn-fill ellipse flex-container']"));
-        public IWebElement TextBoxHomeworkName
-        {
-            get
-            {
-                WebDriverWait driverWait = new WebDriverWait(_driver, TimeSpan.FromSeconds(15));
-                return driverWait.Until(ExpectedConditions.ElementExists(By.XPath("//span[text()='Проектики'")));
-            }
-        }
+        public IWebElement TextBoxHomeworkName => _driver.FindElement(By.XPath(@"/html/body/div/div/main/div[1]/div[2]"));
+        //{
+        //    get
+        //    {
+        //        WebDriverWait driverWait = new WebDriverWait(_driver, TimeSpan.FromSeconds(15));
+        //        return driverWait.Until(ExpectedConditions.ElementExists(By.XPath("//span[text()='Проектики'")));
+        //    }
+        //}
 
         public void GetClickButtonUserNameMenu()
         {
@@ -110,6 +110,7 @@ namespace LMSTestingProjectQAABaku.Pages
         public void ClickButtonPublish()
         {
             ButtonPublish.Click();
+            Thread.Sleep(1000);
         }
         public void SelectTeacherRole()
         {

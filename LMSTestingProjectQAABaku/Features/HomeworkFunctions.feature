@@ -23,7 +23,7 @@ And I click "Добавить задание" button
 When Click select group button
 When I fill form  for send homework
 | DateOfIssue | DeliveryDate | Name      | Description             | Link									   |
-| 26.12.2022  | 25.12.2023   | Проектики | Написать 100 проектиков | https://piter-education.ru:7074/homeworks |
+| 27.12.2022  | 25.12.2023   | Проектики | Написать 100 проектиков | https://piter-education.ru:7074/homeworks |
 And Click pin  button
 And I click "Опубликовать" button
 Then I click "Домашнее задание" tab and see created homework
@@ -64,7 +64,7 @@ And I click "Добавить задание" button
 When Click select group button
 When I fill form  for send homework
 | DateOfIssue | DeliveryDate | Name      | Description             | Link									   |
-| 26.12.2022  | 25.12.2023   | Проектики | Написать 100 проектиков | https://piter-education.ru:7074/homeworks |
+| 27.12.2022  | 25.12.2023   | Проектики | Написать 100 проектиков | https://piter-education.ru:7074/homeworks |
 And Click pin  button
 And I click "Опубликовать" button
 And Click to button "Выйти"
