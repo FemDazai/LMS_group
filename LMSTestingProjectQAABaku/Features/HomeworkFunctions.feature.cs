@@ -83,9 +83,13 @@ namespace LMSTestingProjectQAABaku.Features
         [Xunit.SkippableFactAttribute(DisplayName="As teacher add homework")]
         [Xunit.TraitAttribute("FeatureTitle", "HomeworkFunctions")]
         [Xunit.TraitAttribute("Description", "As teacher add homework")]
+        [Xunit.TraitAttribute("Category", "teacher")]
+        [Xunit.TraitAttribute("Category", "homework")]
         public virtual void AsTeacherAddHomework()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "teacher",
+                    "homework"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("As teacher add homework", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 5
@@ -196,12 +200,16 @@ testRunner.And("I should see homework name", ((string)(null)), ((TechTalk.SpecFl
         [Xunit.SkippableFactAttribute(DisplayName="As student add homework link")]
         [Xunit.TraitAttribute("FeatureTitle", "HomeworkFunctions")]
         [Xunit.TraitAttribute("Description", "As student add homework link")]
+        [Xunit.TraitAttribute("Category", "student")]
+        [Xunit.TraitAttribute("Category", "homework")]
         public virtual void AsStudentAddHomeworkLink()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "student",
+                    "homework"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("As student add homework link", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 46
+#line 33
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -221,7 +229,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 47
+#line 34
 testRunner.Given("Registration as student1 api", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
@@ -230,49 +238,49 @@ testRunner.Given("Registration as student1 api", ((string)(null)), ((TechTalk.Sp
                 table15.AddRow(new string[] {
                             "marina@example.com",
                             "marina123456"});
-#line 48
+#line 35
 testRunner.And("Auth as admin api", ((string)(null)), table15, "And ");
 #line hidden
-#line 51
+#line 38
 testRunner.And("Give student2 teacher role as admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 52
+#line 39
 testRunner.And("Give student3 tutor role as admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 53
+#line 40
 testRunner.And("Give student4 methodist role as admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 54
+#line 41
 testRunner.And("Create courses by admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 55
+#line 42
 testRunner.And("Create group by admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 56
+#line 43
 testRunner.And("Add users in group as admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 57
+#line 44
 testRunner.And("Open auth web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 58
+#line 45
 testRunner.And("Auth as teacher", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 59
+#line 46
 testRunner.When("Click sign in  button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 60
+#line 47
 testRunner.And("Click to the role button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 61
+#line 48
 testRunner.And("Click to  the button teacher", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 62
+#line 49
 testRunner.Given("I click \"Домашнее задание\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 63
+#line 50
 testRunner.And("I click \"Добавить задание\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 64
+#line 51
 testRunner.When("Click select group button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
@@ -282,46 +290,46 @@ testRunner.When("Click select group button", ((string)(null)), ((TechTalk.SpecFl
                             "Description",
                             "Link"});
                 table16.AddRow(new string[] {
-                            "27.12.2022",
+                            "28.12.2022",
                             "25.12.2023",
                             "Проектики",
                             "Написать 100 проектиков",
                             "https://piter-education.ru:7074/homeworks"});
-#line 65
+#line 52
 testRunner.When("I fill form  for send homework", ((string)(null)), table16, "When ");
 #line hidden
-#line 68
+#line 55
 testRunner.And("Click pin  button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 69
+#line 56
 testRunner.And("I click \"Опубликовать\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 70
+#line 57
 testRunner.And("Click to button \"Выйти\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 71
+#line 58
 testRunner.And("Log in as student", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 72
+#line 59
 testRunner.And("Click sign in  button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 73
+#line 60
 testRunner.Given("I click \"Домашние задания\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 74
+#line 61
 testRunner.And("Click in button \"к заданию\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
                             "LinkGitHub"});
                 table17.AddRow(new string[] {
                             "https://github.com/El-ItsMe/Project-Test-1"});
-#line 75
+#line 62
 testRunner.When("I fill link field in page", ((string)(null)), table17, "When ");
 #line hidden
-#line 78
+#line 65
 testRunner.And("Click on send button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 79
+#line 66
 testRunner.And("I should see the status of the completed task as \"Проверить\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }

@@ -1,5 +1,4 @@
 ﻿using LMSTestingProjectQAABaku.Drivers;
- 
 
 namespace LMSTestingProjectQAABaku.Pages
 {
@@ -16,6 +15,7 @@ namespace LMSTestingProjectQAABaku.Pages
         { 
           _driver.Navigate().Refresh();
         }
+
         public abstract void Open();
 
         public void GetCertificateOfSafety()

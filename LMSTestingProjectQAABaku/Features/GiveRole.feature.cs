@@ -83,11 +83,11 @@ namespace LMSTestingProjectQAABaku.Features
         [Xunit.SkippableFactAttribute(DisplayName="As admin set role from teacher")]
         [Xunit.TraitAttribute("FeatureTitle", "GiveRole")]
         [Xunit.TraitAttribute("Description", "As admin set role from teacher")]
-        [Xunit.TraitAttribute("Category", "tag1")]
+        [Xunit.TraitAttribute("Category", "teacher")]
         public virtual void AsAdminSetRoleFromTeacher()
         {
             string[] tagsOfScenario = new string[] {
-                    "tag1"};
+                    "teacher"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("As admin set role from teacher", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 6

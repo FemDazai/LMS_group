@@ -83,11 +83,13 @@ namespace LMSTestingProjectQAABaku.Features
         [Xunit.SkippableFactAttribute(DisplayName="Admin create new group")]
         [Xunit.TraitAttribute("FeatureTitle", "CreateGroup")]
         [Xunit.TraitAttribute("Description", "Admin create new group")]
-        [Xunit.TraitAttribute("Category", "tag1")]
+        [Xunit.TraitAttribute("Category", "admin")]
+        [Xunit.TraitAttribute("Category", "group")]
         public virtual void AdminCreateNewGroup()
         {
             string[] tagsOfScenario = new string[] {
-                    "tag1"};
+                    "admin",
+                    "group"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Admin create new group", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 6
@@ -175,9 +177,13 @@ testRunner.And("Create courses by admin", ((string)(null)), ((TechTalk.SpecFlow.
         [Xunit.SkippableFactAttribute(DisplayName="Create topics like a Methodist")]
         [Xunit.TraitAttribute("FeatureTitle", "CreateGroup")]
         [Xunit.TraitAttribute("Description", "Create topics like a Methodist")]
+        [Xunit.TraitAttribute("Category", "methodist")]
+        [Xunit.TraitAttribute("Category", "topics")]
         public virtual void CreateTopicsLikeAMethodist()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "methodist",
+                    "topics"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create topics like a Methodist", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 29

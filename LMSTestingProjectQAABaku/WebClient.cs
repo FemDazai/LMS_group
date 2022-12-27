@@ -4,8 +4,6 @@ using System.Text;
 using LMSTestingProjectQAABaku.Models;
 using System.Text.Json;
 using LMSTestingProjectQAABaku.ModelsApi;
-using Gherkin;
-using Newtonsoft.Json.Linq;
 
 namespace LMSTestingProjectQAABaku
 {
@@ -25,9 +23,9 @@ namespace LMSTestingProjectQAABaku
             };
             HttpResponseMessage responseMessage = client.Send(message);
             HttpStatusCode actualCode = responseMessage.StatusCode;
-            //int id = Convert.ToInt32(responseMessage.Content.ReadAsStringAsync().Result);
 
         }
+
         public string Auth(AuthRequestModelApi model)
         {
             HttpStatusCode expectedCode = HttpStatusCode.OK;

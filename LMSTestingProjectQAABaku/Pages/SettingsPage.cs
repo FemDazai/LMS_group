@@ -15,10 +15,12 @@ namespace LMSTestingProjectQAABaku.Pages
         {
             _driver.Navigate().GoToUrl(@"https://piter-education.ru:7074/settings");
         }
+
         public void ClickButtonWithPenIcon()
         {
             ButtonWithPenIcon.Click();
         }
+
         public void ClickButtonIcon()
         {
             ButtonIcon.Click();

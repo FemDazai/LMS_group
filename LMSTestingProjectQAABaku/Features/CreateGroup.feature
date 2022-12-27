@@ -2,7 +2,7 @@
 
 A short summary of the feature
 
-@tag1
+@admin @group
 Scenario: Admin create new group
 Given Registration as student1 api
 And Auth as admin api
@@ -25,7 +25,7 @@ And Create courses by admin
 	And Click on "Группы"
 	Then The created group will appear in the list of groups
 	 
-
+@methodist @topics
  Scenario: Create topics like a Methodist
 Given Registration as student1 api
 And Auth as admin api

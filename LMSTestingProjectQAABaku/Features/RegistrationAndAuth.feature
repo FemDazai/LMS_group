@@ -1,7 +1,7 @@
 ﻿Feature: Registration
 Регистрация пользователя как студента
 
-@Student
+@student @registration
 Scenario: Registration as a student
 	Given We enter the text of the site into search bar and click enter
 	When Click to  the "Регистрация" button

@@ -29,26 +29,32 @@ namespace LMSTestingProjectQAABaku.Pages
         {
             _driver.Navigate().GoToUrl("https://piter-education.ru:7074/login");
         }
+
         public void ClickRegistrationButton()
         {
             ButtonRegistration.Click();
         }
+
         public void ClickCheckBox()
         {
             ButtonCheckBox.Click();
         }
+
         public void EnterSurnameInField(string text)
         {
             TextBoxSurname.SendKeys(text);
         }
+
         public void EnterNameInField(string text)
         {
             TextBoxName.SendKeys(text);
         }
+
         public void EnterPatronymicInField(string text)
         {
             TextBoxPatronymic.SendKeys(text);
         }
+
         public void EnterBirthDateInField(string text)
         {
             Actions action = new Actions(_driver);
@@ -56,22 +62,27 @@ namespace LMSTestingProjectQAABaku.Pages
             TextBoxBirthDate.SendKeys(Keys.Backspace);      
             TextBoxBirthDate.SendKeys(text);
         }
+
         public void EnterPasswordInField(string text)
         {
             TextBoxPassword.SendKeys(text);
         }
+
         public void EnterRepeatPasswordInField(string text)
         {
             TextBoxRepeatPassword.SendKeys(text);
         }
+
         public void EnterEmailInField(string text)
         {
             TextBoxEmail.SendKeys(text);
         }
+
         public void EnterPhoneInField(string text)
         {
             TextBoxPhone.SendKeys(text);
         }
+
         public string GetTextNotification()
         {
             return TextNotification1.Text;

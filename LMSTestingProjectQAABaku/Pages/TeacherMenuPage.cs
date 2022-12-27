@@ -40,7 +40,7 @@ namespace LMSTestingProjectQAABaku.Pages
         public IWebElement ButtonSelectRoleinList => _driver.FindElement(By.XPath(@"//li[text()='Преподаватель']"));
         public IWebElement ButtonAddHomework => _driver.FindElement(By.XPath(@"//button[@class='sc-bczRLJ iJvUkY btn btn-fill flex-container']"));
         public IWebElement ButtonPinLink => _driver.FindElement(By.XPath(@"//button[@class='sc-bczRLJ kEeNDb btn btn-fill ellipse flex-container']"));
-        public IWebElement TextBoxHomeworkName => _driver.FindElement(By.XPath(@"/html/body/div/div/main/div[1]/div[2]"));
+        public IWebElement TextBoxHomeworkName => _driver.FindElement(By.XPath(@"//span[text()='Проектики'"));
         //{
         //    get
         //    {
@@ -53,42 +53,52 @@ namespace LMSTestingProjectQAABaku.Pages
         {
             ButtonUserNameMenu.Click();
         }
+
         public void GetClickButtonSelectTeacher()
         {
             ButtonSelectTeacher.Click();
         }
+
         public string GetTextButtonAvatarRole()
         {
             return ButtonAvatarRole.Text;
         }
+
         public string GetTextButtonAvatarName()
         {
             return ButtonAvatarName.Text;
         }
+
         public void GetClickButtonHomework()
         {
             ButtonHomework.Click();
         }
+
         public void GetClickButtonAddTask()
         {
             ButtonAddTask.Click();
         }
+
         public void GetClickButtonSelectGroup()
         {
             ButtonSelectGroup.Click();
         }
+
         public void GetClickButtonButtonAddTask()
         {
             ButtonAddTask.Click();
         }
+
         public void EnterTaskTitle(string text)
         {
             FieldEnterTitle.SendKeys(text);
         }
+
         public void EnterFieldDescriptionTask(string text)
         {
             FieldEnterDescriptionTask.SendKeys(text);
         }
+
         public void EnterTaskAssignmentDate(string text)
         {
             Actions action = new Actions(_driver);
@@ -96,6 +106,7 @@ namespace LMSTestingProjectQAABaku.Pages
             TaskAssignmentDate.SendKeys(Keys.Backspace);
             TaskAssignmentDate.SendKeys(text);
         }
+
         public void EnterTaskDueDate(string text)
         {
             Actions action = new Actions(_driver);
@@ -103,15 +114,18 @@ namespace LMSTestingProjectQAABaku.Pages
             TaskDueDate.SendKeys(Keys.Backspace);
             TaskDueDate.SendKeys(text);
         }
+
         public void EnterFieldUsefulLinks(string text)
         {
             FieldUsefulLinks.SendKeys(text);
         }
+
         public void ClickButtonPublish()
         {
             ButtonPublish.Click();
             Thread.Sleep(1000);
         }
+
         public void SelectTeacherRole()
         {
             ButtonSelectRole.Click();
@@ -122,6 +136,7 @@ namespace LMSTestingProjectQAABaku.Pages
         {
             ButtonAddHomework.Click();
         }
+
         public void ClickButtonPinLink()
         {
             ButtonPinLink.Click();

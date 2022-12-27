@@ -1,7 +1,7 @@
 ﻿Feature: HomeworkFunctions
 
 A short summary of the feature
-
+@teacher @homework
 Scenario: As teacher add homework
 Given Registration as student1 api
 And Auth as admin api
@@ -29,20 +29,7 @@ And I click "Опубликовать" button
 Then I click "Домашнее задание" tab and see created homework
 And  I should see homework name
 
-#Scenario: As student add homework link
-#Given Add homework as teacher
-#Given Open auth web page
-#And Log in as student
-#And I click "Домашнее задание" 
-#And Click in button "к заданию"
-#When I fill in all the fields in page
-#	| LinkGitHub                                |
-#	| https://github.com/El-ItsMe/Project-Test-1|
-#And Click on send button
-#And Click to link "Выполненное задание" 
-#Then I have to go to another page
-#And I should see the status of the completed task as "Проверить"
-
+@student @homework
 Scenario: As student add homework link
 Given Registration as student1 api
 And Auth as admin api
@@ -64,7 +51,7 @@ And I click "Добавить задание" button
 When Click select group button
 When I fill form  for send homework
 | DateOfIssue | DeliveryDate | Name      | Description             | Link									   |
-| 27.12.2022  | 25.12.2023   | Проектики | Написать 100 проектиков | https://piter-education.ru:7074/homeworks |
+| 28.12.2022  | 25.12.2023   | Проектики | Написать 100 проектиков | https://piter-education.ru:7074/homeworks |
 And Click pin  button
 And I click "Опубликовать" button
 And Click to button "Выйти"

@@ -278,7 +278,7 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         [When(@"I should see the status of the completed task as ""([^""]*)""")]
         public void WhenIShouldSeeTheStatusOfTheCompletedTaskAs(string проверить)
         {
-            throw new PendingStepException();
+          
         }
 
         [Given(@"Log in as student")]
@@ -313,20 +313,6 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             _studentPage.ClickButtonHomeworkLinkSend();
         }
 
-        //[When(@"Click to link ""([^""]*)""")]
-        //public void WhenClickToLink(string p0)
-        //{
-        //    _studentPage.ClickLinkReadyHomework();
-        //}
-
-        //[Then(@"I have to go to another page")]
-        //public void ThenIHaveToGoToAnotherPage()
-        //{
-        //    DriverStorage storage = DriverStorage.GetInstance();
-        //    string expected = Urls.HomePage;
-        //    string actual = storage.Driver.Url;
-        //    Assert.AreNotEqual(expected, actual);
-        //}
         [Then(@"I should see the status of the completed task as ""([^""]*)""")]
         public void ThenIShouldSeeTheStatusOfTheCompletedTaskAs(string expected)
         {

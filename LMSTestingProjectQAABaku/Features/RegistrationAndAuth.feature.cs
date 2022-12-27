@@ -83,11 +83,13 @@ namespace LMSTestingProjectQAABaku.Features
         [Xunit.SkippableFactAttribute(DisplayName="Registration as a student")]
         [Xunit.TraitAttribute("FeatureTitle", "Registration")]
         [Xunit.TraitAttribute("Description", "Registration as a student")]
-        [Xunit.TraitAttribute("Category", "Student")]
+        [Xunit.TraitAttribute("Category", "student")]
+        [Xunit.TraitAttribute("Category", "registration")]
         public virtual void RegistrationAsAStudent()
         {
             string[] tagsOfScenario = new string[] {
-                    "Student"};
+                    "student",
+                    "registration"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Registration as a student", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 5

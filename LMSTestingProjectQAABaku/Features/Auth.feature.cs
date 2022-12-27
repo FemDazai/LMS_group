@@ -83,11 +83,11 @@ namespace LMSTestingProjectQAABaku.Features
         [Xunit.SkippableFactAttribute(DisplayName="Auth")]
         [Xunit.TraitAttribute("FeatureTitle", "Auth")]
         [Xunit.TraitAttribute("Description", "Auth")]
-        [Xunit.TraitAttribute("Category", "Student")]
+        [Xunit.TraitAttribute("Category", "authorization")]
         public virtual void Auth()
         {
             string[] tagsOfScenario = new string[] {
-                    "Student"};
+                    "authorization"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Auth", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 6
@@ -165,11 +165,11 @@ this.ScenarioInitialize(scenarioInfo);
         [Xunit.SkippableFactAttribute(DisplayName="Negative auth without password")]
         [Xunit.TraitAttribute("FeatureTitle", "Auth")]
         [Xunit.TraitAttribute("Description", "Negative auth without password")]
-        [Xunit.TraitAttribute("Category", "tag")]
+        [Xunit.TraitAttribute("Category", "negative")]
         public virtual void NegativeAuthWithoutPassword()
         {
             string[] tagsOfScenario = new string[] {
-                    "tag"};
+                    "negative"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Negative auth without password", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 21
@@ -220,9 +220,11 @@ this.ScenarioInitialize(scenarioInfo);
         [Xunit.SkippableFactAttribute(DisplayName="Negative auth with wrong email")]
         [Xunit.TraitAttribute("FeatureTitle", "Auth")]
         [Xunit.TraitAttribute("Description", "Negative auth with wrong email")]
+        [Xunit.TraitAttribute("Category", "negdtive")]
         public virtual void NegativeAuthWithWrongEmail()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "negdtive"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Negative auth with wrong email", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 31

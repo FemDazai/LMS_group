@@ -37,7 +37,6 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         }
 
         [Given(@"Go to the tab ""([^""]*)""")]
-
         public void GivenGoToTheTab(string p0)
         {
             _managerMenuPage.ClickCreateGroupButton();

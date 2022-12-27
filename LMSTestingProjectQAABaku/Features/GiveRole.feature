@@ -2,7 +2,7 @@
 
 A short summary of the feature
 
-@tag1
+@teacher
 Scenario: As admin set role from teacher
 Given Registration as student1 api
 And Auth as admin api

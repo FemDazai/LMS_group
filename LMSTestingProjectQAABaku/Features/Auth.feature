@@ -2,7 +2,7 @@
 
 A short summary of the feature
 
-@Student
+@authorization
 Scenario: Auth
 	Given Open auth web page 
 	When Click to  the "Регистрация" button
@@ -17,7 +17,7 @@ Scenario: Auth
 	And Click sign in  button
 	Then I shold to see the username "Иван"
 
-@tag
+@negative
 Scenario: Negative auth without password
     Given Open auth web page
 	And Fill  form
@@ -27,7 +27,7 @@ Scenario: Negative auth without password
 	Then I stay on the login  page 
 	And I shold to see  the notification "Введите пароль"
 
-
+@negdtive
 Scenario: Negative auth with wrong email
 Given Open auth web page
     And Fill form

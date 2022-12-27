@@ -16,8 +16,8 @@ namespace LMSTestingProjectQAABaku.Pages
                 return driverWait.Until(ExpectedConditions.ElementExists(By.XPath(@"//span[text()='Иван']")));
             }
         }
-        public IWebElement ButtonForAuth => _driver.FindElement(By.XPath(@"//button[@class='sc-bczRLJ iJvUkY btn btn-fill flex-container']"));
-        public IWebElement AvatarButtonName => _driver.FindElement(By.XPath(@"//div[@class='user-info-wrapper']']"));
+        public IWebElement ButtonForAuth => _driver.FindElement(By.XPath(@"//button[@class='sc-bczRLJ iJvUkY btn btn-fill flex-container']"));     
+        public IWebElement AvatarButtonName => _driver.FindElement(By.XPath(@"//span[@class='avatar-name transition-styles']"));       
         public IWebElement NotificationWrongPasswordInput => _driver.FindElement(By.XPath(@"//div[text()='Введите пароль']"));
         public IWebElement NotificationWrongEmail => _driver.FindElement(By.XPath(@"//div[text()='Неправильные логин или пароль']"));
 
@@ -41,6 +41,7 @@ namespace LMSTestingProjectQAABaku.Pages
         public void ClickAuthButton()
         {
             ButtonForAuth.Click();
+            Thread.Sleep(1000);
         }
 
         public string GetButtonByName()
@@ -50,6 +51,7 @@ namespace LMSTestingProjectQAABaku.Pages
 
         public void ClickOnAvatarName()
         {
+            //AvatarButtonName.Click();
             AvatarButtonName.Click();
         }
 
