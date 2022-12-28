@@ -1,5 +1,4 @@
-﻿
-namespace LMSTestingProjectQAABaku.Models
+﻿namespace LMSTestingProjectQAABaku.Models
 {
     public class ChangePasswordModel
     {

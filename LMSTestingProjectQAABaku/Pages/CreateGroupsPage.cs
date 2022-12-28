@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LMSTestingProjectQAABaku.Pages
+﻿namespace LMSTestingProjectQAABaku.Pages
 {
     public class CreateGroupsPage: AbstractPage
     {
         public IWebElement TextBoxGroupName => _driver.FindElement(By.XPath(@"//input[@placeholder = 'Введите название']"));
         public IWebElement CheckboxForChooseCourses => _driver.FindElement(By.XPath(@"//div[@class='drop-down-filter  ']"));
         public IWebElement ButtonForChooseCourse => _driver.FindElement(By.XPath(@"//li[text()='FrontedCourse']"));
-        public IWebElement CheckboxForChooseTeacher => _driver.FindElement(By.XPath(@"//span[text()='Вилли Вонка']"));
+        public IWebElement CheckboxForChooseTeacher => _driver.FindElement(By.XPath(@"/html/body/div/div/main/div[1]/form/div[3]/div/label[16]/span"));
         public IWebElement CheckboxForChooseTutor => _driver.FindElement(By.XPath(@"//span[text()='Чуя Накахара']"));
         public IWebElement ButtonForSave => _driver.FindElement(By.XPath(@"//button[@class = 'sc-bczRLJ iJvUkY btn btn-fill flex-container']"));
         public IWebElement TitleGroup => _driver.FindElement(By.XPath(@"//div[text()='Шумные дети - группа1']"));

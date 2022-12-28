@@ -1,7 +1,5 @@
 using LMSTestingProjectQAABaku.Models;
 using LMSTestingProjectQAABaku.Pages;
-using System;
-using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 
 namespace LMSTestingProjectQAABaku.StepDefinitions
@@ -40,6 +38,7 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         public void GivenGoToTheTab(string p0)
         {
             _managerMenuPage.ClickCreateGroupButton();
+
         }
 
         [When(@"Click to  the button admin")]
@@ -52,16 +51,33 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         public void WhenIFillInAllTheFieldsInPageAndChooseTeacherAndTyutor(Table table)
         {
             var createTable = table.CreateInstance<CreateGroupsModel>();
-
             _createGroupsPage.EnterGroupName(createTable.GroupName);
+        }
+
+        [When(@"Select course")]
+        public void WhenSelectCourse()
+        {
+            _createGroupsPage.ChooseCourses();
+            Thread.Sleep(500);
+            _createGroupsPage.ChooseConcretCourses();
+        }
+
+        [When(@"Select teacher")]
+        public void WhenSelectTeacher()
+        {
             _createGroupsPage.ChooseTeacher();
+        }
+
+        [When(@"select tutor")]
+        public void WhenSelectTutor()
+        {
             _createGroupsPage.ChooseTutor();
         }
 
         [When(@"Click on  ""([^""]*)"" button")]
         public void WhenClickOnButton(string save)
         {
-           _createGroupsPage.SaveButton();//не нажимает на кнопку бяка фу
+           _createGroupsPage.SaveButton();
         }
 
         [When(@"Click on ""([^""]*)""")]
@@ -129,6 +145,5 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             string actual = _coursesPage.ButtTopicsName();
             Assert.Equal(expected, actual);
         }
-
     }
 }

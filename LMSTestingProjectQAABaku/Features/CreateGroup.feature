@@ -19,8 +19,11 @@ And Create courses by admin
 	And Click to  the button admin
     Given Go to the tab "Создать группу" 
 	When I fill in all the fields in page and choose teacher and tyutor
-	| Group name            |
+	| GroupName            |
 	| Шумные дети - группа1 |
+	And Select course
+	And Select teacher
+	And select tutor
 	And Click on  "Save" button
 	And Click on "Группы"
 	Then The created group will appear in the list of groups

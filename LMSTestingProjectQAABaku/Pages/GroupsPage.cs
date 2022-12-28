@@ -1,5 +1,4 @@
-﻿
-namespace LMSTestingProjectQAABaku.Pages
+﻿namespace LMSTestingProjectQAABaku.Pages
 {
     public class GroupsPage: AbstractPage
     {

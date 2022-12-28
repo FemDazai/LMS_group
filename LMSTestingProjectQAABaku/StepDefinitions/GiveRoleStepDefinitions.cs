@@ -1,7 +1,5 @@
-using LMSTestingProjectQAABaku.Models;
 using LMSTestingProjectQAABaku.ModelsApi;
 using LMSTestingProjectQAABaku.Pages;
-using System.Net;
 
 namespace LMSTestingProjectQAABaku.StepDefinitions
 {

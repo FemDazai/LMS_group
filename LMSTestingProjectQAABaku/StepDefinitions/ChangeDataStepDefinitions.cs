@@ -1,7 +1,4 @@
-using System;
 using LMSTestingProjectQAABaku.Pages;
-using System.Configuration;
-using TechTalk.SpecFlow;
 using LMSTestingProjectQAABaku.Models;
 using TechTalk.SpecFlow.Assist;
 
@@ -32,7 +29,6 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         {
             var _table = table.CreateInstance<AuthModel>();
             _authPage.EnterEmail(_table.Email);
-            //_authPage.DeletePassword();
             _authPage.EnterPassword(_table.Password);
         }
 

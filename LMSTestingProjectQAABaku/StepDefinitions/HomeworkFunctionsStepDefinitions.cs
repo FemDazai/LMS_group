@@ -1,12 +1,8 @@
 using LMSTestingProjectQAABaku.Models;
 using LMSTestingProjectQAABaku.Pages;
 using System;
-using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 using LMSTestingProjectQAABaku.ModelsApi;
-using System.Security.Policy;
-using LMSTestingProjectQAABaku.Drivers;
-using System.Net;
 
 namespace LMSTestingProjectQAABaku.StepDefinitions
 {
@@ -101,9 +97,6 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
         [Then(@"I should see homework name")]
         public void ThenIShouldSeeHomeworkName()
         {
-            //// string expected = "Задание";
-            // string actual = _teacherMenuPage.GetHomeworkName();
-            // Assert.Equal(expected, actual);
             Assert.NotNull(_teacherMenuPage.TextBoxHomeworkName);
         }
 
@@ -120,44 +113,6 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             _authPage.EnterEmail("rodionraskol30@gmail.com");
             _authPage.EnterPassword("123456789");
         }
-
-
-
-
-        //[When(@"Auth as teacher")]
-        //public void WhenAuthAsTeacher()
-        //{
-        //    _authPage.EnterEmail("pulya@example.com");
-        //    _authPage.EnterPassword("123456789");
-        //    _authPage.ClickAuthButton();
-        //}
-
-        //[When(@"I click ""([^""]*)"" tab")]
-        //public void WhenIClickTab(string p0)
-        //{
-        //    _teacherMenuPage.SelectTeacherRole();
-        //    _teacherMenuPage.GetClickButtonHomework();
-        //}
-
-        //[When(@"I click get page for send homework")]
-        //public void WhenIClickGetPageForSendHomework(Table table)
-        //{
-        //    _teacherMenuPage.GetClickButtonAddTask();
-        //    var homeworkTable = table.CreateInstance<CreateNewTaskModel>();
-        //    _teacherMenuPage.GetClickButtonSelectGroup();
-        //    _teacherMenuPage.EnterTaskAssignmentDate(homeworkTable.DateOfIssue);
-        //    _teacherMenuPage.EnterTaskDueDate(homeworkTable.DeliveryDate);
-        //    _teacherMenuPage.EnterTaskTitle(homeworkTable.Name);
-        //    _teacherMenuPage.EnterFieldDescriptionTask(homeworkTable.Description);
-        //    _teacherMenuPage.EnterFieldUsefulLinks(homeworkTable.Link);
-        //    _teacherMenuPage.ClickButtonPublish();
-        //}
-
-        //[Then(@"I click ""([^""]*)"" tab and see created homework")]
-        //public void ThenIClickTabAndSeeCreatedHomework(string p0)
-        //{
-        //    _teacherMenuPage.GetClickButtonHomework();
-        //}
 
         [Given(@"Registration as student(.*) api")]
         public void GivenRegistrationAsStudentApi(int p0)
@@ -320,6 +275,5 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             //Assert.Equal(expected, actual);
             Assert.NotNull(_teacherMenuPage.TextBoxHomeworkName);
         }
-
     }
 }

@@ -83,7 +83,5 @@ namespace LMSTestingProjectQAABaku.StepDefinitions
             string actual = _authPage.GetNotificationWrongEmail();
             Assert.Equal(expected, actual);
         }
-
-
     }
 }

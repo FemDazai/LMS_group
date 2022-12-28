@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LMSTestingProjectQAABaku.Drivers
+﻿namespace LMSTestingProjectQAABaku.Drivers
 {
     public class DriverStorage
     {
        public WebDriver Driver { get; set; }
 
-        private static DriverStorage _driverStorage;//переменная для хранения ссылки на объкт класса 
+        private static DriverStorage _driverStorage;
         private DriverStorage()
         {
             Driver = new ChromeDriver();

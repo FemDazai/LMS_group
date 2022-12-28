@@ -1,5 +1,4 @@
 ﻿using OpenQA.Selenium.Support.UI; 
-using SeleniumExtras.WaitHelpers;
 using OpenQA.Selenium.Interactions;
 
 namespace LMSTestingProjectQAABaku.Pages

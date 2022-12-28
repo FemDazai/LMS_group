@@ -1,5 +1,4 @@
-﻿
-using OpenQA.Selenium.Support.UI;
+﻿using OpenQA.Selenium.Support.UI;
 
 
 namespace LMSTestingProjectQAABaku.Pages
@@ -51,7 +50,6 @@ namespace LMSTestingProjectQAABaku.Pages
 
         public void ClickOnAvatarName()
         {
-            //AvatarButtonName.Click();
             AvatarButtonName.Click();
         }
 

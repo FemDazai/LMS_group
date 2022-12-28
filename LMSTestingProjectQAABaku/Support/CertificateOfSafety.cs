@@ -4,7 +4,6 @@ namespace LMSTestingProjectQAABaku.Support
 {
     public  class CertificateOfSafety
     {
-
         public void GetCertificateOfSafety()
         {
             DriverStorage storage = DriverStorage.Get();
